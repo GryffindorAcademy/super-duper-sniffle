@@ -100,9 +100,9 @@ class Donate extends Component {
       amount: this.state.amount
     };
     if (this.state.frequency === 'one time') {
-      let { data } = await axios.post('http://localhost:3000/api/stripe/oneTimeDonation', body); 
+      let { data } = await axios.post('/api/stripe/oneTimeDonation', body); 
     } else {
-      let { data } = await axios.post('http://localhost:3000/api/stripe/monthlyDonation', body); 
+      let { data } = await axios.post('/api/stripe/monthlyDonation', body); 
     }
     if (data.length) {
       alert('Thank you for your donation!'); 

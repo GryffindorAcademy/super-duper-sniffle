@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon src/rest-server/index.js",
     "build": "BABEL_ENV=production webpack --config=config/webpack.prod.js --env.NODE_ENV=production",
     "build:dev": "webpack --config=config/webpack.dev.js",
     "dev": "nodemon --inspect --watch src/rest-server --watch config src/rest-server/main.js",
@@ -39,6 +40,7 @@
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
     "brotli-webpack-plugin": "^1.0.0",
+    "chalk": "^2.4.1",
     "compression-webpack-plugin": "^1.1.11",
     "cors": "^2.8.4",
     "css-loader": "^0.28.11",
