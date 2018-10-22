@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
 import yvonneStory from "../images/ourYvonne.jpg";
+import ScrollToTop from "./ScrollToTop";
 
 export default class Yvonne extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export default class Yvonne extends Component {
     return (
       <div>
         <div>
+          <ScrollToTop />
           <Navigation />
         </div>
         <div className="yvonneHeader">

@@ -15,10 +15,11 @@ import jake10 from "../images/jake10.jpg";
 
 import africa1 from "../images/africa1.jpg";
 import africa2 from "../images/africa2.jpg";
-import africa4 from '../images/africa4.jpg';
-import africa6 from '../images/africa6.jpg';
-import africa8 from '../images/africa8.jpg';
-import africa9 from '../images/africa9.jpg';
+import africa4 from "../images/africa4.jpg";
+import africa6 from "../images/africa6.jpg";
+import africa8 from "../images/africa8.jpg";
+import africa9 from "../images/africa9.jpg";
+import ScrollToTop from "./ScrollToTop";
 
 export default class VisitAfrica extends Component {
   constructor(props) {
@@ -111,6 +112,7 @@ export default class VisitAfrica extends Component {
     return (
       <div>
         <div>
+          <ScrollToTop />
           <Navigation />
         </div>
         <main>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
 import kelvinStory from "../images/kelvinStory.jpg";
+import ScrollToTop from "./ScrollToTop";
 
 export default class Kelvin extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export default class Kelvin extends Component {
     return (
       <div>
         <div>
+          <ScrollToTop />
           <Navigation />
         </div>
         <div className="kelvinHeader">
@@ -26,16 +28,23 @@ export default class Kelvin extends Component {
               How you got interested in computers?
             </div>
             <div className="kelvinStory__containerQuestions--subtext1">
-            I got interested in computers because I was able in getting knowledge and skills in computers such as words ,PowerPoint's, excel and many others.
-            These have enabled me to know how to write words document such as CVs and also word presentations. 
-            Also i got interested in computers because now i am able to search and google topics in google which are linked to my course of electrical engineer and also creating my own website.
+              I got interested in computers because I was able in getting
+              knowledge and skills in computers such as words ,PowerPoint's,
+              excel and many others. These have enabled me to know how to write
+              words document such as CVs and also word presentations. Also i got
+              interested in computers because now i am able to search and google
+              topics in google which are linked to my course of electrical
+              engineer and also creating my own website.
             </div>
             <div className="kelvinStory__containerQuestions--text2">
               What projects are you proud of, or what projects are you currently
               working on?
             </div>
             <div className="kelvinStory__containerQuestions--subtext2">
-            Currently I am a mentor of two kids which I am giving them those skills in computers that I was earlier. Now I am currently working hard in helping my mentees to have the skills and knowledge in computers.
+              Currently I am a mentor of two kids which I am giving them those
+              skills in computers that I was earlier. Now I am currently working
+              hard in helping my mentees to have the skills and knowledge in
+              computers.
             </div>
           </div>
 
