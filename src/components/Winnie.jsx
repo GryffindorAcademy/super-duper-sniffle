@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
 import winnieStory from "../images/winnieStory.jpg";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class Winnie extends Component {
   constructor(props) {

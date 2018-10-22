@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
 import onesmusStory from "../images/onesmusStory.jpg";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class Onesmus extends Component {
   constructor(props) {

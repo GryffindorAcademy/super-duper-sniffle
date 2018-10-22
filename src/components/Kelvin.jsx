@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
 import kelvinStory from "../images/kelvinStory.jpg";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class Kelvin extends Component {
   constructor(props) {

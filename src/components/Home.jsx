@@ -7,7 +7,7 @@ import Meaning from "./Meaning.jsx";
 import Action from "./Action.jsx";
 import Subscribe from "./Subscribe.jsx";
 import Footer from "./Footer.jsx";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 class Home extends Component {
   constructor() {

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
 import yvonneStory from "../images/ourYvonne.jpg";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class Yvonne extends Component {
   constructor(props) {

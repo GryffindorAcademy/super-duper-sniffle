@@ -5,7 +5,7 @@ import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
 import donate1 from "../images/donateMonthly1.jpg";
 import donate2 from "../images/donateMonthly2.jpg";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 class Donate extends Component {
   constructor(props) {
@@ -104,11 +104,13 @@ class Donate extends Component {
         token: token.id,
         amount: this.state.amount
       };
-      let { data } = await axios.post(
-        "http://localhost:3000/api/stripe/monthlyDonation",
-        body
-      );
-      if (data.length) {
+      let response = await fetch("/api/stripe/monthlyDonation", {
+        method: "POST",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify(body)
+      });
+      console.log("Monthly Donate page", response);
+      if (response.ok) {
         alert("Thank you for your donation!");
         history.push("/VisitAfrica");
       }

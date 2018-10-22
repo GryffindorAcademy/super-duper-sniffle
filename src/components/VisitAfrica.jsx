@@ -19,7 +19,7 @@ import africa4 from "../images/africa4.jpg";
 import africa6 from "../images/africa6.jpg";
 import africa8 from "../images/africa8.jpg";
 import africa9 from "../images/africa9.jpg";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class VisitAfrica extends Component {
   constructor(props) {

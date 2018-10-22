@@ -4,7 +4,7 @@ import { CardElement, injectStripe } from "react-stripe-elements";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
 import donate from "../images/donate.jpg";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 class Donate extends Component {
   constructor(props) {
@@ -92,30 +92,38 @@ class Donate extends Component {
 
   submit = async ev => {
     const { history } = this.props;
-    let { token } = await this.props.stripe.createToken({
-      name: this.state.name
-    });
-    let body = {
-      name: this.state.name,
-      lastname: this.state.lastname,
-      email: this.state.email,
-      token: token.id,
-      amount: this.state.amount
-    };
-    if (this.state.frequency === "one time") {
-      let { data } = await axios.post(
-        "http://localhost:3000/api/stripe/oneTimeDonation",
-        body
-      );
-    } else {
-      let { data } = await axios.post(
-        "http://localhost:3000/api/stripe/monthlyDonation",
-        body
-      );
-    }
-    if (data.length) {
-      alert("Thank you for your donation!");
-      history.push("/VisitAfrica");
+    let response;
+    try {
+      let { token } = await this.props.stripe.createToken({
+        name: this.state.name
+      });
+      let body = {
+        name: this.state.name,
+        lastname: this.state.lastname,
+        email: this.state.email,
+        token: token.id,
+        amount: this.state.amount
+      };
+      if (this.state.frequency === "one time") {
+        response = await fetch("/api/stripe/oneTimeDonation", {
+          method: "POST",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(body)
+        });
+      } else {
+        response = await fetch("/api/stripe/monthlyDonation", {
+          method: "POST",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(body)
+        });
+      }
+      console.log(response);
+      // if (data.length) {
+      //   alert("Thank you for your donation!");
+      //   history.push("/VisitAfrica");
+      // }
+    } catch (err) {
+      console.log(err);
     }
   };
 

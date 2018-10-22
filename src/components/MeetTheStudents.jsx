@@ -10,7 +10,7 @@ import samuel from "../images/ourSamuel.jpg";
 import vivian from "../images/ourVivian.jpg";
 import winnie from "../images/ourWinnie.jpg";
 import yvonne from "../images/ourYvonne.jpg";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class MeetTheStudents extends Component {
   constructor(props) {

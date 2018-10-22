@@ -8,7 +8,7 @@ import Isabella from "../images/isabellasPicture.jpg";
 import Jacob from "../images/jacob.jpg";
 import Daniel from "../images/DanielMbogoh.jpg";
 import Popup from "./Popup.jsx";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class Team extends Component {
   constructor() {
