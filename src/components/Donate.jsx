@@ -1,120 +1,138 @@
-import React, { Component } from 'react';
-import axios from 'axios'; 
-import { CardElement, injectStripe } from 'react-stripe-elements'; 
-import Navigation from './NavigationBar.jsx';
-import Footer from './Footer.jsx';
-import donate from '../images/donate.jpg';
+import React, { Component } from "react";
+import axios from "axios";
+import { CardElement, injectStripe } from "react-stripe-elements";
+import Navigation from "./NavigationBar.jsx";
+import Footer from "./Footer.jsx";
+import donate from "../images/donate.jpg";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 class Donate extends Component {
   constructor(props) {
-    super(props); 
+    super(props);
     this.state = {
-      name: '',
-      lastname: '',
-      email: '',
-      amount: '', 
-      frequency: '',
-      amount: '',
-      bgColor25: 'none',
-      bgColor50: 'none',
-      bgColor75: 'none',
-      bgColor100: 'none',
-      frequency: 'monthly'
-    }
+      name: "",
+      lastname: "",
+      email: "",
+      amount: "",
+      frequency: "",
+      amount: "",
+      bgColor25: "none",
+      bgColor50: "none",
+      bgColor75: "none",
+      bgColor100: "none",
+      frequency: "monthly"
+    };
   }
 
-  handleState = (e) => {
-    const {name, value} = e.target;
-    this.setState({[name]: value})
-    console.log(this.state.name, this.state.email, this.state.lastname)
-  } 
+  handleState = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+    console.log(this.state.name, this.state.email, this.state.lastname);
+  };
 
   handleAmount(e) {
-    const { name, value } = e.target; 
+    const { name, value } = e.target;
     this.setState({
       amount: parseInt(value) * 100,
-      bgColor25: '#69C9CA',
-      bgColor50: '#69C9CA',
-      bgColor75: '#69C9CA',
-      bgColor100: '#69C9CA'
-    });
-  }
-    
-  handleTwentyfive = () => {   
-    this.setState({
-      amount: 2500, 
-      bgColor25: '#8F67BD',
-      bgColor50: '#69C9CA',
-      bgColor75: '#69C9CA',
-      bgColor100: '#69C9CA'
+      bgColor25: "#69C9CA",
+      bgColor50: "#69C9CA",
+      bgColor75: "#69C9CA",
+      bgColor100: "#69C9CA"
     });
   }
 
-  handleFifty = (e) => {  
+  handleTwentyfive = () => {
+    this.setState({
+      amount: 2500,
+      bgColor25: "#8F67BD",
+      bgColor50: "#69C9CA",
+      bgColor75: "#69C9CA",
+      bgColor100: "#69C9CA"
+    });
+  };
+
+  handleFifty = e => {
     this.setState({
       amount: 5000,
-      bgColor50: '#8F67BD',
-      bgColor25: '#69C9CA',
-      bgColor75: '#69C9CA',
-      bgColor100: '#69C9CA'
+      bgColor50: "#8F67BD",
+      bgColor25: "#69C9CA",
+      bgColor75: "#69C9CA",
+      bgColor100: "#69C9CA"
     });
-  }
+  };
 
   handleSeventyfive = () => {
     this.setState({
       amount: 7500,
-      bgColor75: '#8F67BD',
-      bgColor25: '#69C9CA',
-      bgColor50: '#69C9CA',
-      bgColor100: '#69C9CA'
+      bgColor75: "#8F67BD",
+      bgColor25: "#69C9CA",
+      bgColor50: "#69C9CA",
+      bgColor100: "#69C9CA"
     });
-  }
+  };
 
   handleHundred = () => {
     this.setState({
       amount: 10000,
-      bgColor100: '#8F67BD',
-      bgColor25: '#69C9CA',
-      bgColor50: '#69C9CA',
-      bgColor75: '#69C9CA',
+      bgColor100: "#8F67BD",
+      bgColor25: "#69C9CA",
+      bgColor50: "#69C9CA",
+      bgColor75: "#69C9CA"
     });
-  }
+  };
 
-  toggleToMonthly = async() => {
-    const { frequency } = this.state; 
-    if (frequency === 'monthly') {
-      this.setState({frequency: 'one time'});
+  toggleToMonthly = async () => {
+    const { frequency } = this.state;
+    if (frequency === "monthly") {
+      this.setState({ frequency: "one time" });
     } else {
-      this.setState({frequency: 'monthly'});
+      this.setState({ frequency: "monthly" });
     }
-  }
+  };
 
-  submit = async(ev) => {
-    const { history } = this.props; 
-    let {token} = await this.props.stripe.createToken({name: this.state.name});
-    let body = {
-      name: this.state.name,
-      lastname: this.state.lastname, 
-      email: this.state.email,
-      token: token.id,
-      amount: this.state.amount
-    };
-    if (this.state.frequency === 'one time') {
-      let { data } = await axios.post('http://localhost:3000/api/stripe/oneTimeDonation', body); 
-    } else {
-      let { data } = await axios.post('http://localhost:3000/api/stripe/monthlyDonation', body); 
+  submit = async ev => {
+    const { history } = this.props;
+    let response;
+    try {
+      let { token } = await this.props.stripe.createToken({
+        name: this.state.name
+      });
+      let body = {
+        name: this.state.name,
+        lastname: this.state.lastname,
+        email: this.state.email,
+        token: token.id,
+        amount: this.state.amount
+      };
+      if (this.state.frequency === "one time") {
+        response = await fetch("/api/stripe/oneTimeDonation", {
+          method: "POST",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(body)
+        });
+      } else {
+        response = await fetch("/api/stripe/monthlyDonation", {
+          method: "POST",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(body)
+        });
+      }
+      console.log(response);
+      if (response.ok) {
+        alert("Thank you for your donation!");
+        history.push("/VisitAfrica");
+      }
+    } catch (err) {
+      console.log(err);
     }
-    if (data.length) {
-      alert('Thank you for your donation!'); 
-      history.push('/VisitAfrica'); 
-    }
-  }
+  };
 
   render() {
     return (
       <div>
         <div>
-          <Navigation /> 
+          <ScrollToTop />
+          <Navigation />
         </div>
         <main>
           <div className="donateBackground">
@@ -129,50 +147,124 @@ class Donate extends Component {
               </div>
             </div>
             <div className="row">
-            <div className="col-1-of-2">
-              <div className="donationForm">
-                <div className="donationForm__formLabel">Personal Information</div>
-                <div className="donationForm__information">
-                  <form>
-                    <input className="donationForm__information--input" placeholder="First name" name="name" required onChange={this.handleState.bind(this)} />
-                    <input className="donationForm__information--input" placeholder="Last name" name="lastname" required onChange={this.handleState.bind(this)} />
-                    <input className="donationForm__information--input" placeholder="Email" name="email" required onChange={this.handleState.bind(this)} />
-                  </form>
-                </div>
-                <div className="donationForm__formLabel">Payment Information</div>
-                <div className="donationForm__donation">
-                  <div className="donationForm__amounts">
-                  <label className="amount__container--donationLabel">Select amount</label>
-                    <div className="donationForm__amounts--btn" onClick={this.handleTwentyfive.bind(this)} style={{backgroundColor:this.state.bgColor25}}>$25</div>
-                    <div className="donationForm__amounts--btn" onClick={this.handleFifty.bind(this)} style={{backgroundColor:this.state.bgColor50}}>$50</div>
-                    <div className="donationForm__amounts--btn" onClick={this.handleSeventyfive.bind(this)} style={{backgroundColor:this.state.bgColor75}}>$75</div>
-                    <div className="donationForm__amounts--btn" onClick={this.handleHundred.bind(this)} style={{backgroundColor:this.state.bgColor100}}>$100</div>
-                    <div className="amount">
-                      <form>
-                      <label className="amount__container--donationLabel">Other</label>
-                        <div className="amount__container">
-                          <label className="amount__container--label">$</label>
-                          <input className="amount__container--input" onChange={this.handleAmount.bind(this)}/>
-                          <label className="amount__container--label">USD</label>
-                        </div>
-                        <div className="question">
-                        <label className="switch">
-                          <input type="checkbox" onClick={this.toggleToMonthly}/>
-                          <span className="slider round"></span>
-                        </label>
-                        <label className="question__container">Donate monthly</label>
-                        </div>
-                      </form>
-                    </div>
+              <div className="col-1-of-2">
+                <div className="donationForm">
+                  <div className="donationForm__formLabel">
+                    Personal Information
                   </div>
-                  <CardElement style={{base: {fontSize: '15px', fontFamily: 'Ubuntu'}}}/>
+                  <div className="donationForm__information">
+                    <form>
+                      <input
+                        className="donationForm__information--input"
+                        placeholder="First name"
+                        name="name"
+                        required
+                        onChange={this.handleState.bind(this)}
+                      />
+                      <input
+                        className="donationForm__information--input"
+                        placeholder="Last name"
+                        name="lastname"
+                        required
+                        onChange={this.handleState.bind(this)}
+                      />
+                      <input
+                        className="donationForm__information--input"
+                        placeholder="Email"
+                        name="email"
+                        required
+                        onChange={this.handleState.bind(this)}
+                      />
+                    </form>
+                  </div>
+                  <div className="donationForm__formLabel">
+                    Payment Information
+                  </div>
+                  <div className="donationForm__donation">
+                    <div className="donationForm__amounts">
+                      <label className="amount__container--donationLabel">
+                        Select amount
+                      </label>
+                      <div
+                        className="donationForm__amounts--btn"
+                        onClick={this.handleTwentyfive.bind(this)}
+                        style={{ backgroundColor: this.state.bgColor25 }}
+                      >
+                        $25
+                      </div>
+                      <div
+                        className="donationForm__amounts--btn"
+                        onClick={this.handleFifty.bind(this)}
+                        style={{ backgroundColor: this.state.bgColor50 }}
+                      >
+                        $50
+                      </div>
+                      <div
+                        className="donationForm__amounts--btn"
+                        onClick={this.handleSeventyfive.bind(this)}
+                        style={{ backgroundColor: this.state.bgColor75 }}
+                      >
+                        $75
+                      </div>
+                      <div
+                        className="donationForm__amounts--btn"
+                        onClick={this.handleHundred.bind(this)}
+                        style={{ backgroundColor: this.state.bgColor100 }}
+                      >
+                        $100
+                      </div>
+                      <div className="amount">
+                        <form>
+                          <label className="amount__container--donationLabel">
+                            Other
+                          </label>
+                          <div className="amount__container">
+                            <label className="amount__container--label">
+                              $
+                            </label>
+                            <input
+                              className="amount__container--input"
+                              onChange={this.handleAmount.bind(this)}
+                            />
+                            <label className="amount__container--label">
+                              USD
+                            </label>
+                          </div>
+                          <div className="question">
+                            <label className="switch">
+                              <input
+                                type="checkbox"
+                                onClick={this.toggleToMonthly}
+                              />
+                              <span className="slider round" />
+                            </label>
+                            <label className="question__container">
+                              Donate monthly
+                            </label>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <CardElement
+                      style={{
+                        base: { fontSize: "15px", fontFamily: "Ubuntu" }
+                      }}
+                    />
+                  </div>
+                  <div
+                    className="donationForm__button"
+                    onClick={this.submit.bind(this)}
+                  >
+                    Donate
+                  </div>
                 </div>
-                  <div className="donationForm__button" onClick={this.submit.bind(this)}>Donate</div>
               </div>
-            </div>
               <div className="col-1-of-2">
                 <div className="composition">
-                  <img className="composition__photo composition__photo--p2" src={donate}/>
+                  <img
+                    className="composition__photo composition__photo--p2"
+                    src={donate}
+                  />
                 </div>
               </div>
             </div>
@@ -182,8 +274,8 @@ class Donate extends Component {
           <Footer />
         </footer>
       </div>
-    )
+    );
   }
 }
 
-export default injectStripe(Donate); 
+export default injectStripe(Donate);

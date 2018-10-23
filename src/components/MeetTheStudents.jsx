@@ -10,6 +10,7 @@ import samuel from "../images/ourSamuel.jpg";
 import vivian from "../images/ourVivian.jpg";
 import winnie from "../images/ourWinnie.jpg";
 import yvonne from "../images/ourYvonne.jpg";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class MeetTheStudents extends Component {
   constructor(props) {
@@ -70,6 +71,7 @@ export default class MeetTheStudents extends Component {
     return (
       <div>
         <div>
+          <ScrollToTop />
           <Navigation />
         </div>
         <main>
@@ -135,7 +137,8 @@ export default class MeetTheStudents extends Component {
                     {this.state.students[2]}
                   </div>
                   <div className="studentsContainer__eachStudent--info-subtitle">
-                    I am working hard in spreading my skills of computer back to the community so people can get educated abaut computers.
+                    I am working hard in spreading my skills of computer back to
+                    the community so people can get educated abaut computers.
                     <div onClick={this.handleKelvin.bind(this)}>
                       {`Hear ${this.state.students[2]}'s story`}
                       &rarr;

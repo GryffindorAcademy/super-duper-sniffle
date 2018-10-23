@@ -66,7 +66,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|gif|png|jpeg|ico)$/,
+        test: /\.(jpg|gif|png|jpeg)$/,
         use: [
           {
             loader: "file-loader",
@@ -101,8 +101,7 @@ module.exports = {
     new HTMLWebpackPlugin({
       template: "./src/index.html",
       inject: true,
-      title: "Jijenge",
-      favicon: 'src/images/favicon.ico'
+      title: "Jijenge"
     })
   ]
 }
