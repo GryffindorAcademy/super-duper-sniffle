@@ -118,10 +118,10 @@ class Donate extends Component {
         });
       }
       console.log(response);
-      // if (data.length) {
-      //   alert("Thank you for your donation!");
-      //   history.push("/VisitAfrica");
-      // }
+      if (response.ok) {
+        alert("Thank you for your donation!");
+        history.push("/VisitAfrica");
+      }
     } catch (err) {
       console.log(err);
     }
