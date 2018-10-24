@@ -1,5 +1,6 @@
 const { stripe } = require("../config/stripe");
 const { success, error } = require("../lib/log");
+const client = require("../config/postgres");
 
 const monthlyDonation = {
   post: async (req, res) => {
@@ -33,14 +34,27 @@ const monthlyDonation = {
         items: [{ plan: varPlan.id }]
       });
       console.log("SUBSCRIPTION", subscription);
-      // let { status } = await stripe.charges.create({
-      //   receipt_email: input.email,
-      //   amount: input.amount,
-      //   currency: "usd",
-      //   description: "Jijenge Donation",
-      //   source: input.token
-      // });
-      console.log(subscription.status);
+
+      // Confirm data
+      console.log(input.name, input.lastname, customer.id, input.email);
+      // Add required data to PSQL
+      client.query(`
+        INSERT INTO monthlydonors
+        (
+          name, 
+          lastname, 
+          customerid, 
+          email
+        ) 
+          VALUES 
+        (
+          '${input.name}', 
+          '${input.lastname}', 
+          '${customer.id}', 
+          '${input.email}'
+        )
+      ;`);
+
       success("Successfully processed data from payment controller");
       res.json(subscription.status);
     } catch (err) {
