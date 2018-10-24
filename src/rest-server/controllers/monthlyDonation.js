@@ -47,10 +47,10 @@ const monthlyDonation = {
         ) 
           VALUES 
         (
-          ${input.name}, 
-          ${input.lastname}, 
+          '${input.name}', 
+          '${input.lastname}', 
           '${customer.id}', 
-          ${input.email}
+          '${input.email}'
         )
       ;`);
 
