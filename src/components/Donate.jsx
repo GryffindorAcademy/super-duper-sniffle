@@ -92,7 +92,7 @@ class Donate extends Component {
 
   submit = async ev => {
     const { history } = this.props;
-    let response;
+    let url = "monthlyDonation";
     try {
       let { token } = await this.props.stripe.createToken({
         name: this.state.name
@@ -105,18 +105,13 @@ class Donate extends Component {
         amount: this.state.amount
       };
       if (this.state.frequency === "one time") {
-        response = await fetch("/api/stripe/oneTimeDonation", {
-          method: "POST",
-          headers: { "Content-Type": "text/plain" },
-          body: JSON.stringify(body)
-        });
-      } else {
-        response = await fetch("/api/stripe/monthlyDonation", {
-          method: "POST",
-          headers: { "Content-Type": "text/plain" },
-          body: JSON.stringify(body)
-        });
+        url = "oneTimeDonation";
       }
+      let response = await fetch(`/api/stripe/${url}`, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify(body)
+      });
       console.log(response);
       if (response.ok) {
         alert("Thank you for your donation!");
