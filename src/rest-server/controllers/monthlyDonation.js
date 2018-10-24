@@ -36,7 +36,14 @@ const monthlyDonation = {
       console.log("SUBSCRIPTION", subscription);
 
       // Confirm data
-      console.log(input.name, input.lastname, customer.id, input.email);
+      console.log(
+        "REQUIRED DATA START",
+        input.name,
+        input.lastname,
+        customer.id,
+        input.email,
+        "REQUIRED DATA END"
+      );
       // Add required data to PSQL
       client.query(`
         INSERT INTO monthlydonors
