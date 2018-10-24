@@ -32,7 +32,8 @@
 // module.exports = db;
 const { Client } = require("pg");
 const client = new Client({
-  connectionString: "ec2-23-23-245-89.compute-1.amazonaws.com",
+  connectionString:
+    "postgres://kbkchjmxideqop:93abf238d2249d7d7cb1f80fefeaed51c6a16f5375f0cf9e2cf023ba2fc80ba6@ec2-23-23-245-89.compute-1.amazonaws.com:5432/d1vq8h32m1bkqd",
   ssl: true
 });
 client.connect();
