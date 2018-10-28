@@ -222,13 +222,7 @@ export default class Team extends Component {
                     </figure>
                   </div>
                   <div className="isabellaPopup__left">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Magnam nihil recusandae nulla tenetur aliquid ullam, natus
-                    dolorem laborum voluptate placeat quos, voluptatibus iste?
-                    Aperiam explicabo atque dolorem laudantium nihil quis, quos
-                    temporibus iusto mollitia culpa repudiandae incidunt cum
-                    sequi? Non sapiente atque nobis voluptatum repudiandae
-                    dolore, id optio rem voluptates.
+                  I’m a full-stack software engineer helping impactful organizations reach their highest potential.
                   </div>
                 </div>
               </div>
