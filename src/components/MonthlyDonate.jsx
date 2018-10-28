@@ -90,9 +90,9 @@ class Donate extends Component {
     }
   };
 
-  submitMonthly = async ev => {
-    ev.preventDefault();
+  submit = async ev => {
     const { history } = this.props;
+    let response;
     try {
       let { token } = await this.props.stripe.createToken({
         name: this.state.name
@@ -104,18 +104,26 @@ class Donate extends Component {
         token: token.id,
         amount: this.state.amount
       };
-      let response = await fetch("/api/stripe/monthlyDonation", {
-        method: "POST",
-        headers: { "Content-Type": "text/plain" },
-        body: JSON.stringify(body)
-      });
-      console.log("Monthly Donate page", response);
+      if (this.state.frequency === "one time") {
+        response = await fetch("/api/stripe/oneTimeDonation", {
+          method: "POST",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(body)
+        });
+      } else {
+        response = await fetch("/api/stripe/monthlyDonation", {
+          method: "POST",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(body)
+        });
+      }
+      console.log(response);
       if (response.ok) {
         alert("Thank you for your donation!");
         history.push("/VisitAfrica");
       }
     } catch (err) {
-      throw err;
+      console.log(err);
     }
   };
 
@@ -245,7 +253,7 @@ class Donate extends Component {
                   </div>
                   <div
                     className="donationForm__button"
-                    onClick={this.submitMonthly.bind(this)}
+                    onClick={this.submit.bind(this)}
                   >
                     Donate
                   </div>

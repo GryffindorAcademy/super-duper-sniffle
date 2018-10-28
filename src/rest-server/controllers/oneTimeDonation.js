@@ -3,17 +3,15 @@ const { success, error } = require("../lib/log");
 
 const oneTimeDonation = {
   post: async (req, res) => {
-    const input = JSON.parse(req.body);
-    console.log(typeof input, input);
+    const { name, lastname, email, token, amount } = JSON.parse(req.body);
     try {
       let { status } = await stripe.charges.create({
-        receipt_email: input.email,
-        amount: input.amount,
+        receipt_email: email,
+        amount: amount,
         currency: "usd",
         description: "Jijenge Donation",
-        source: input.token
+        source: token
       });
-      console.log(status);
       success("Successfully processed data from payment controller");
       res.json({ status });
     } catch (err) {
