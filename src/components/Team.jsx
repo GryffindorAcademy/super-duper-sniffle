@@ -86,13 +86,10 @@ export default class Team extends Component {
                     </figure>
                   </div>
                   <div className="johnPopup__left">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Accusantium perferendis quos placeat iste dolorem corrupti
-                    eius sit similique, vel non quia, quibusdam culpa recusandae
-                    sint id dolor exercitationem! Blanditiis, aperiam odio
-                    tempore soluta incidunt ullam sunt obcaecati officiis fuga?
-                    Officia ipsum dolores quidem nam atque soluta aspernatur
-                    nostrum aut a.
+                  John is a Physician, humanitarian and liaison. 
+                  He has great passion in uplifting the vulnerable in some of the most hard to reach and under-served communities in order for them  to get necessary skills to uplift their lives. 
+                  Jijenge Academy came up as a result of the gap that John saw from high school graduates in the orphanages struggling to get college education or even jobs having no employability skills. 
+                  He coordinates the program to ensure it runs smoothly, reaches out to potential local donors to support the students with basic needs, and scouts for internship opportunities as well as apprenticeship for the high school graduates.  
                   </div>
                 </div>
               </div>

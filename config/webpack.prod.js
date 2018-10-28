@@ -32,30 +32,6 @@ module.exports = env => {
           ],
           exclude: /node_modules/
         },
-        // {
-        //   test: /\.css$/,
-        //   use: ExtractTextPlugin.extract({
-        //     fallback: "style-loader",
-        //     use: {
-        //       loader: "css-loader",
-        //       options: {
-        //         minimize: true
-        //       }
-        //     }
-        //   })
-        // },
-        // {
-        //   test: /\.(sass|scss)$/,
-        //   use:  ExtractTextPlugin.extract({
-        //     fallback: "style-loader",
-        //     use: {
-        //       loader: "sass-loader",
-        //       options: {
-        //         minimize: true
-        //       }
-        //     }
-        //   })
-        // },
         {
           test: /\.css$/,
           use: [
@@ -70,7 +46,6 @@ module.exports = env => {
         {
           test: /\.(sass|scss)$/,
           use: [
-            // fallback to style-loader in development
             process.env.NODE_ENV !== "production"
               ? "style-loader"
               : MiniCssExtractPlugin.loader,
@@ -95,7 +70,6 @@ module.exports = env => {
             {
               loader: "file-loader",
               options: {
-                //Images folder in the src directory
                 name: "images/[name].[ext]"
               }
             }
@@ -107,7 +81,6 @@ module.exports = env => {
             {
               loader: "file-loader",
               options: {
-                //Images folder in the src directory
                 name: "videos/[name].[ext]"
               }
             }
@@ -116,7 +89,6 @@ module.exports = env => {
       ]
     },
     plugins: [
-      // new ExtractTextPlugin("[name].css"),
       new CopyWebpackPlugin([{ from: "./src/favicon.ico" }]),
       new OptimizeCSSAssetsPlugin({
         assetNameRegExp: /\.css$/g,

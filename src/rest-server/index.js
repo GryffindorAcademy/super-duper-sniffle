@@ -1,6 +1,5 @@
 const http = require("http");
 const app = require("./config/express");
-// const db = require("./config/postgres");
 const PORT = process.env.PORT || 6060;
 const { success, error } = require("./lib/log");
 

@@ -27,7 +27,6 @@ class Donate extends Component {
   handleState = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
-    console.log(this.state.name, this.state.email, this.state.lastname);
   };
 
   handleAmount(e) {
