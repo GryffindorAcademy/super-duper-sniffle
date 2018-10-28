@@ -93,37 +93,42 @@ class Donate extends Component {
   submit = async ev => {
     const { history } = this.props;
     let response;
-    try {
-      let { token } = await this.props.stripe.createToken({
-        name: this.state.name
-      });
-      let body = {
-        name: this.state.name,
-        lastname: this.state.lastname,
-        email: this.state.email,
-        token: token.id,
-        amount: this.state.amount
-      };
-      if (this.state.frequency === "one time") {
-        response = await fetch("/api/stripe/oneTimeDonation", {
-          method: "POST",
-          headers: { "Content-Type": "text/plain" },
-          body: JSON.stringify(body)
+    if (this.state.amount < "500") {
+      alert("The minimum amount is $5");
+    } else {
+      try {
+        let { token } = await this.props.stripe.createToken({
+          name: this.state.name
         });
-      } else {
-        response = await fetch("/api/stripe/monthlyDonation", {
-          method: "POST",
-          headers: { "Content-Type": "text/plain" },
-          body: JSON.stringify(body)
-        });
+        let body = {
+          name: this.state.name,
+          lastname: this.state.lastname,
+          email: this.state.email,
+          token: token.id,
+          amount: this.state.amount
+        };
+        if (this.state.frequency === "one time") {
+          response = await fetch("/api/stripe/oneTimeDonation", {
+            method: "POST",
+            headers: { "Content-Type": "text/plain" },
+            body: JSON.stringify(body)
+          });
+        } else {
+          response = await fetch("/api/stripe/monthlyDonation", {
+            method: "POST",
+            headers: { "Content-Type": "text/plain" },
+            body: JSON.stringify(body)
+          });
+        }
+        if (response.ok) {
+          alert("Thank you for your donation!");
+          history.push("/VisitAfrica");
+        } else if (response.status === 409) {
+          alert("It seems there is an error with your personal information, please try again");
+        }
+      } catch (err) {
+        console.log(err);
       }
-      console.log(response);
-      if (response.ok) {
-        alert("Thank you for your donation!");
-        history.push("/VisitAfrica");
-      }
-    } catch (err) {
-      console.log(err);
     }
   };
 
