@@ -57,7 +57,7 @@ export default class extends Component {
               component={props => (
                 <StripeProvider
                   stripe={this.props.stripe}
-                  apiKey="pk_test_tbFndORrRYzJjE2PVtiTnRRU"
+                  apiKey="pk_live_vszrvMhRROMcdoTW3BXBy3MQ"
                 >
                   <SettingUpStripe {...props} />
                 </StripeProvider>
@@ -69,7 +69,7 @@ export default class extends Component {
               component={props => (
                 <StripeProvider
                   stripe={this.props.stripe}
-                  apiKey="pk_test_tbFndORrRYzJjE2PVtiTnRRU"
+                  apiKey="pk_live_vszrvMhRROMcdoTW3BXBy3MQ"
                 >
                   <SettingUpStripeMonthly {...props} />
                 </StripeProvider>
