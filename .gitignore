@@ -60,3 +60,6 @@ typings/
 
 # next.js build output
 .next
+
+# secret key 
+/Users/isabellabeltran/Code/super-duper-sniffle/src/rest-server/config/stripe/index.js

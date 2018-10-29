@@ -1,1 +1,1 @@
-export const stripe = require("stripe")(process.env.SECRET);
+export const stripe = require("stripe")("sk_live_0SHGDtMRwq");
