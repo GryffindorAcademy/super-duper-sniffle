@@ -25,7 +25,6 @@ const monthlyDonation = {
           const subscription = await stripe.subscriptions.create({
             customer: customer.id,
             items: [{ plan: "plan_Ds6HYG3GMu3nnm" }]
-            // items: [{ plan: "plan_Ds3ZmQIVpmhJl4" }]
           });
         } else if (amount === 5000) {
           const customer = await stripe.customers.create({
@@ -35,7 +34,6 @@ const monthlyDonation = {
           const subscription = await stripe.subscriptions.create({
             customer: customer.id,
             items: [{ plan: "plan_Ds6H6Pe1gGY8c4" }]
-            // items: [{ plan: "plan_Ds3b7Ezd5LMyKp" }]
           });
         } else if (amount === 7500) {
           const customer = await stripe.customers.create({
@@ -45,7 +43,6 @@ const monthlyDonation = {
           const subscription = await stripe.subscriptions.create({
             customer: customer.id,
             items: [{ plan: "plan_Ds6IG08ocs7tyW" }]
-            // items: [{ plan: "plan_Ds3bktD4GN1HH8" }]
           });
         } else if (amount === 10000) {
           const customer = await stripe.customers.create({
@@ -55,7 +52,6 @@ const monthlyDonation = {
           const subscription = await stripe.subscriptions.create({
             customer: customer.id,
             items: [{ plan: "plan_Ds6I9oT7FcfiOv" }]
-            // items: [{ plan: "plan_Ds3cBMYpzSryqS" }]
           });
         } else {
           const product = await stripe.products.create({
