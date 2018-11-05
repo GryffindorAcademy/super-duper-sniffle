@@ -2,16 +2,22 @@ import React, { Component } from "react";
 import axios from "axios";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
-import jake1 from "../images/jake1.jpg";
-import jake2 from "../images/jake2.jpg";
-import jake3 from "../images/jake3.jpg";
-import jake4 from "../images/jake4.jpg";
-import jake5 from "../images/jake5.jpg";
-import jake6 from "../images/jake6.jpg";
-import jake7 from "../images/jake7.jpg";
-import jake8 from "../images/jake8.jpg";
-import jake9 from "../images/jake9.jpg";
-import jake10 from "../images/jake10.jpg";
+// import jake1 from "../images/jake1.jpg";
+// import jake2 from "../images/jake2.jpg";
+// import jake3 from "../images/jake3.jpg";
+// import jake4 from "../images/jake4.jpg";
+// import jake5 from "../images/jake5.jpg";
+// import jake6 from "../images/jake6.jpg";
+// import jake7 from "../images/jake7.jpg";
+// import jake8 from "../images/jake8.jpg";
+// import jake9 from "../images/jake9.jpg";
+// import jake10 from "../images/jake10.jpg";
+
+import visit from "../images/visit.jpg";
+import visit2 from "../images/visit2.jpg";
+import visit3 from "../images/visit3.jpg";
+import visit4 from "../images/visit4.jpg";
+import visit5 from "../images/visit5.jpg";
 
 import africa1 from "../images/africa1.jpg";
 import africa2 from "../images/africa2.jpg";
@@ -26,16 +32,11 @@ export default class VisitAfrica extends Component {
     super(props);
     this.state = {
       meet: [
-        jake1,
-        jake2,
-        jake3,
-        jake4,
-        jake5,
-        jake6,
-        jake7,
-        jake8,
-        jake9,
-        jake10
+        visit,
+        visit2,
+        visit3,
+        visit4,
+        visit5
       ],
       meetCurrent: 0,
       africa: [africa1, africa2, africa4, africa6, africa8, africa9],
