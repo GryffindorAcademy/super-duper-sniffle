@@ -2,22 +2,13 @@ import React, { Component } from "react";
 import axios from "axios";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
-// import jake1 from "../images/jake1.jpg";
-// import jake2 from "../images/jake2.jpg";
-// import jake3 from "../images/jake3.jpg";
-// import jake4 from "../images/jake4.jpg";
-// import jake5 from "../images/jake5.jpg";
-// import jake6 from "../images/jake6.jpg";
-// import jake7 from "../images/jake7.jpg";
-// import jake8 from "../images/jake8.jpg";
-// import jake9 from "../images/jake9.jpg";
-// import jake10 from "../images/jake10.jpg";
-
 import visit from "../images/visit.jpg";
+import visit1 from "../images/visit1.jpg";
 import visit2 from "../images/visit2.jpg";
 import visit3 from "../images/visit3.jpg";
 import visit4 from "../images/visit4.jpg";
 import visit5 from "../images/visit5.jpg";
+import visit6 from "../images/visit6.jpg";
 
 import africa1 from "../images/africa1.jpg";
 import africa2 from "../images/africa2.jpg";
@@ -33,10 +24,12 @@ export default class VisitAfrica extends Component {
     this.state = {
       meet: [
         visit,
+        visit1,
         visit2,
         visit3,
         visit4,
-        visit5
+        visit5,
+        visit6
       ],
       meetCurrent: 0,
       africa: [africa1, africa2, africa4, africa6, africa8, africa9],
@@ -91,23 +84,6 @@ export default class VisitAfrica extends Component {
       });
     }
   }
-
-  // handleRequestItenerary = async e => {
-  //   e.preventDefault();
-  //   const { email } = this.state;
-  //   try {
-  //     const body = {
-  //       email
-  //     };
-  //     const data = await axios.post(
-  //       "http://localhost:3000/api/request/itenerary",
-  //       body
-  //     );
-  //     console.log("Success", data);
-  //   } catch (err) {
-  //     console.log("Error saving email requesting itenerary", err);
-  //   }
-  // };
 
   render() {
     return (

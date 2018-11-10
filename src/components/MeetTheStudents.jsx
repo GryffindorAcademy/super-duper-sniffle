@@ -222,7 +222,7 @@ export default class MeetTheStudents extends Component {
                     {this.state.students[6]}
                   </div>
                   <div className="studentsContainer__eachStudent--info-subtitle">
-                    Currently, I am trying to help at least two kids at Mogra to
+                    Currently, I am trying to help at least two kids to
                     know how to use a computer and know how to browse the
                     internet. I am also trying to get my admission to college
                     coming September.
