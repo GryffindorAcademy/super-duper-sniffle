@@ -6,7 +6,7 @@ export default class Header extends Component {
   }
 
   handleDonation() {
-    this.props.history.push('/Donate');
+    this.props.history.push('/MonthlyDonate');
   }
 
   render() {
