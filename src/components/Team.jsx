@@ -131,7 +131,7 @@ export default class Team extends Component {
                     from NY to Nairobi to raise Series A rounds for startups &
                     SMEs across East Africa with I-Dev International. Jijenge
                     Academy developed organically from our work with a local
-                    orphanage to stop Mogra's graduated high school students
+                    orphanage to stop graduated high school students
                     from returning back to the slums from which they were
                     rescued. I've been on the ground in Nairobi for the past
                     year, training students in employability and positioning
