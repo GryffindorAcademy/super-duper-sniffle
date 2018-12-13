@@ -78,9 +78,6 @@ export default class VisitAfrica extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <main>
           <div className="visitHeader">
             <div className="visitBanner">

@@ -13,9 +13,6 @@ export default class Daniel extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <div className="danielHeader">
           <div className="danielHeader__background">
             <div className="danielHeader__title">Hi, I'm Daniel Achieng</div>

@@ -13,9 +13,6 @@ export default class Ann extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <div className="annHeader">
           <div className="annHeader__background">
             <div className="annHeader__title">Hi, I'm Ann Ndunge</div>

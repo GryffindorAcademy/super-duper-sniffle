@@ -13,9 +13,6 @@ export default class Vivian extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <div className="vivianHeader">
           <div className="vivianHeader__background">
             <div className="vivianHeader__title">Hi, I'm Vivian Achieng</div>

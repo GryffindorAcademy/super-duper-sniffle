@@ -13,9 +13,6 @@ export default class Onesmus extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <div className="onesmusHeader">
           <div className="onesmusHeader__background">
             <div className="onesmusHeader__title">Hi, I'm Onesmus Achieng</div>

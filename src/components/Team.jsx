@@ -32,9 +32,6 @@ export default class Team extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <header>
           <div className="team" />
           <div className="teamQuote">

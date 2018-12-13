@@ -69,9 +69,6 @@ export default class MeetTheStudents extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <main>
           <div className="ourStudentsHeader">
             <div className="ourStudentsHeader__text">

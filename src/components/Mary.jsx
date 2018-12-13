@@ -13,9 +13,6 @@ export default class Mary extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <div className="maryHeader">
           <div className="maryHeader__background">
             <div className="maryHeader__title">Hi, I'm Mary Achieng</div>

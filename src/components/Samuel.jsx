@@ -13,9 +13,6 @@ export default class Samuel extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <div className="samuelHeader">
           <div className="samuelHeader__background">
             <div className="samuelHeader__title">Hi, I'm Samuel Achieng</div>

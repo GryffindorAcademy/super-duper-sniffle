@@ -13,9 +13,6 @@ export default class Winnie extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <div className="winnieHeader">
           <div className="winnieHeader__background">
             <div className="winnieHeader__title">Hi, I'm Winnie Achieng</div>

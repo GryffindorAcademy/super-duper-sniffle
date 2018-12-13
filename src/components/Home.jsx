@@ -23,9 +23,6 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <header>
           <Header history={this.props.history} />
         </header>

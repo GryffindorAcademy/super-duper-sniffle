@@ -13,9 +13,6 @@ export default class Kelvin extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <div className="kelvinHeader">
           <div className="kelvinHeader__background">
             <div className="kelvinHeader__title">Hi, I'm Kelvin Voke</div>

@@ -134,9 +134,6 @@ class Donate extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <main>
           <div className="donateBackground">
             <div className="donateBackground__heading">

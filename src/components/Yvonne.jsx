@@ -13,9 +13,6 @@ export default class Yvonne extends Component {
   render() {
     return (
       <div>
-        <div>
-          <Navigation />
-        </div>
         <div className="yvonneHeader">
           <div className="yvonneHeader__background">
             <div className="yvonneHeader__title">Hi, I'm Yvonne Achieng</div>
