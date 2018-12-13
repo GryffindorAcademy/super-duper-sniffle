@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
 import visit from "../images/visit.jpg";
@@ -16,21 +15,12 @@ import africa4 from "../images/africa4.jpg";
 import africa6 from "../images/africa6.jpg";
 import africa8 from "../images/africa8.jpg";
 import africa9 from "../images/africa9.jpg";
-import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class VisitAfrica extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      meet: [
-        visit,
-        visit1,
-        visit2,
-        visit3,
-        visit4,
-        visit5,
-        visit6
-      ],
+      meet: [visit, visit1, visit2, visit3, visit4, visit5, visit6],
       meetCurrent: 0,
       africa: [africa1, africa2, africa4, africa6, africa8, africa9],
       expAfrica: 0
@@ -89,7 +79,6 @@ export default class VisitAfrica extends Component {
     return (
       <div>
         <div>
-          <ScrollToTop />
           <Navigation />
         </div>
         <main>

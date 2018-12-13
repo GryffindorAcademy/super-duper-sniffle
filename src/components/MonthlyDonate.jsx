@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import axios from "axios";
 import { CardElement, injectStripe } from "react-stripe-elements";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
 import donate1 from "../images/donateMonthly1.jpg";
 import donate2 from "../images/donateMonthly2.jpg";
-import ScrollToTop from "./ScrollToTop.jsx";
 
 class Donate extends Component {
   constructor(props) {
@@ -124,7 +122,9 @@ class Donate extends Component {
           alert("Thank you for your donation!");
           history.push("/VisitAfrica");
         } else if (response.status === 409) {
-          alert("It seems there is an error with your personal information, please try again");
+          alert(
+            "It seems there is an error with your personal information, please try again"
+          );
         }
       } catch (err) {
         console.log(err);
@@ -136,7 +136,6 @@ class Donate extends Component {
     return (
       <div>
         <div>
-          <ScrollToTop />
           <Navigation />
         </div>
         <section id="section-donation">
@@ -256,18 +255,26 @@ class Donate extends Component {
                       }}
                     />
                   </div>
-                  <div className="donationForm__formLabel">By clicking, you agree to <a href="#terms">our terms</a> and conditions.</div>
+                  <div className="donationForm__formLabel">
+                    By clicking, you agree to <a href="#terms">our terms</a> and
+                    conditions.
+                  </div>
                   <div id="terms" className="termsandconditions">
                     <div className="termsandconditions__content">
                       <div className="termsandconditions__right">
-                        <a href="#section-donation" className="termsandconditions__close">
+                        <a
+                          href="#section-donation"
+                          className="termsandconditions__close"
+                        >
                           &times;
                         </a>
                       </div>
                       <div className="termsandconditions__left">
-                      “Jijenge Academy is a Delaware nonprofit corporation. Its application for federal recognition of section 501(c)(3) charitable status is in process.”
+                        “Jijenge Academy is a Delaware nonprofit corporation.
+                        Its application for federal recognition of section
+                        501(c)(3) charitable status is in process.”
                       </div>
-                  </div>
+                    </div>
                   </div>
                   <div
                     className="donationForm__button"
@@ -291,7 +298,7 @@ class Donate extends Component {
               </div>
             </div>
           </div>
-        </section >
+        </section>
         <footer>
           <Footer />
         </footer>

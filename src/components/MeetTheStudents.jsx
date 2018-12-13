@@ -10,7 +10,6 @@ import samuel from "../images/ourSamuel.jpg";
 import vivian from "../images/ourVivian.jpg";
 import winnie from "../images/ourWinnie.jpg";
 import yvonne from "../images/ourYvonne.jpg";
-import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class MeetTheStudents extends Component {
   constructor(props) {
@@ -71,7 +70,6 @@ export default class MeetTheStudents extends Component {
     return (
       <div>
         <div>
-          <ScrollToTop />
           <Navigation />
         </div>
         <main>
@@ -222,10 +220,9 @@ export default class MeetTheStudents extends Component {
                     {this.state.students[6]}
                   </div>
                   <div className="studentsContainer__eachStudent--info-subtitle">
-                    Currently, I am trying to help at least two kids to
-                    know how to use a computer and know how to browse the
-                    internet. I am also trying to get my admission to college
-                    coming September.
+                    Currently, I am trying to help at least two kids to know how
+                    to use a computer and know how to browse the internet. I am
+                    also trying to get my admission to college coming September.
                     <div onClick={this.handleVivian.bind(this)}>
                       {`Hear ${this.state.students[6]}'s story`}
                       &rarr;

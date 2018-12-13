@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Popup from "reactjs-popup";
-import ControlledEmailPopup from './EmailPopup.jsx';
+import React, { Component } from "react";
+import ControlledEmailPopup from "./EmailPopup.jsx";
 
 export default class Footer extends Component {
   constructor(props) {
@@ -18,7 +16,9 @@ export default class Footer extends Component {
             <div>charitable status is in process</div>
           </div>
           <div className="footer__container--social">
-            <div className="footer__container--social-email"><ControlledEmailPopup  /></div>
+            <div className="footer__container--social-email">
+              <ControlledEmailPopup />
+            </div>
           </div>
           <div className="footer__container--form">
             <div>112 South St. Suite 106</div>
@@ -26,6 +26,6 @@ export default class Footer extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

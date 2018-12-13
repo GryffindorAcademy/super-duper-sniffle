@@ -7,8 +7,6 @@ import Vassiliki from "../images/vassia.jpg";
 import Isabella from "../images/isabellasPicture.jpg";
 import Jacob from "../images/jacob.jpg";
 import Daniel from "../images/DanielMbogoh.jpg";
-import Popup from "./Popup.jsx";
-import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class Team extends Component {
   constructor() {
@@ -16,7 +14,6 @@ export default class Team extends Component {
     this.state = {
       popup: "close"
     };
-    // this.handleCloseBioPopup = this.handleCloseBioPopup.bind(this);
   }
 
   handleBioPopup() {
@@ -36,7 +33,6 @@ export default class Team extends Component {
     return (
       <div>
         <div>
-          <ScrollToTop />
           <Navigation />
         </div>
         <header>
@@ -86,10 +82,17 @@ export default class Team extends Component {
                     </figure>
                   </div>
                   <div className="johnPopup__left">
-                  John is a Physician, humanitarian and liaison. 
-                  He has great passion in uplifting the vulnerable in some of the most hard to reach and under-served communities in order for them  to get necessary skills to uplift their lives. 
-                  Jijenge Academy came up as a result of the gap that John saw from high school graduates in the orphanages struggling to get college education or even jobs having no employability skills. 
-                  He coordinates the program to ensure it runs smoothly, reaches out to potential local donors to support the students with basic needs, and scouts for internship opportunities as well as apprenticeship for the high school graduates.  
+                    John is a Physician, humanitarian and liaison. He has great
+                    passion in uplifting the vulnerable in some of the most hard
+                    to reach and under-served communities in order for them to
+                    get necessary skills to uplift their lives. Jijenge Academy
+                    came up as a result of the gap that John saw from high
+                    school graduates in the orphanages struggling to get college
+                    education or even jobs having no employability skills. He
+                    coordinates the program to ensure it runs smoothly, reaches
+                    out to potential local donors to support the students with
+                    basic needs, and scouts for internship opportunities as well
+                    as apprenticeship for the high school graduates.
                   </div>
                 </div>
               </div>
@@ -131,12 +134,12 @@ export default class Team extends Component {
                     from NY to Nairobi to raise Series A rounds for startups &
                     SMEs across East Africa with I-Dev International. Jijenge
                     Academy developed organically from our work with a local
-                    orphanage to stop graduated high school students
-                    from returning back to the slums from which they were
-                    rescued. I've been on the ground in Nairobi for the past
-                    year, training students in employability and positioning
-                    Jijenge as a pipeline partner to feed our candidates to high
-                    growth Kenyan Tech Companies.
+                    orphanage to stop graduated high school students from
+                    returning back to the slums from which they were rescued.
+                    I've been on the ground in Nairobi for the past year,
+                    training students in employability and positioning Jijenge
+                    as a pipeline partner to feed our candidates to high growth
+                    Kenyan Tech Companies.
                   </div>
                 </div>
               </div>
@@ -222,7 +225,8 @@ export default class Team extends Component {
                     </figure>
                   </div>
                   <div className="isabellaPopup__left">
-                  I’m a full-stack software engineer helping impactful organizations reach their highest potential.
+                    I’m a full-stack software engineer helping impactful
+                    organizations reach their highest potential.
                   </div>
                 </div>
               </div>

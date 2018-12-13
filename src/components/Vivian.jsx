@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
 import vivianStory from "../images/ourVivian.jpg";
-import ScrollToTop from "./ScrollToTop.jsx";
 
 export default class Vivian extends Component {
   constructor(props) {
     super(props);
   }
-
+  /////////////////////////////////////
+  // Text always goes in a P element //
+  /////////////////////////////////////
   render() {
     return (
       <div>
         <div>
-          <ScrollToTop />
           <Navigation />
         </div>
         <div className="vivianHeader">

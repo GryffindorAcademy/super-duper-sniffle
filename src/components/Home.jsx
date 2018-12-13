@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navigation from "./NavigationBar.jsx";
 import Header from "./Header.jsx";
 import Meaning from "./Meaning.jsx";
 import Action from "./Action.jsx";
 import Subscribe from "./Subscribe.jsx";
 import Footer from "./Footer.jsx";
-import ScrollToTop from "./ScrollToTop.jsx";
 
 class Home extends Component {
   constructor() {
@@ -27,7 +24,6 @@ class Home extends Component {
     return (
       <div>
         <div>
-          <ScrollToTop />
           <Navigation />
         </div>
         <header>
