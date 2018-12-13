@@ -1,21 +1,25 @@
 const { stripe } = require("../config/stripe");
 const { success, error } = require("../lib/log");
 const { Joi, schema } = require("../lib/middleware/request-validation.js");
-const client = require("../config/postgres/index.js");
+// const client = require("../config/postgres/index.js");
 
 const monthlyDonation = {
   post: async (req, res) => {
     const { name, lastname, email, token, amount } = JSON.parse(req.body);
-    const productAmount = amount/100; 
-    const validation = Joi.validate({name: `${name}`, lastname: `${lastname}`, email: `${email}`}, schema, (err, value) => {
-      if(err === null) {
-        return true;  
-      } else {
-        return false; 
+    const productAmount = amount / 100;
+    const validation = Joi.validate(
+      { name: `${name}`, lastname: `${lastname}`, email: `${email}` },
+      schema,
+      (err, value) => {
+        if (err === null) {
+          return true;
+        } else {
+          return false;
+        }
       }
-    });
+    );
     try {
-      // Define a Product or add to an existing one 
+      // Define a Product or add to an existing one
       if (validation) {
         if (amount === 2500) {
           const customer = await stripe.customers.create({
@@ -74,9 +78,9 @@ const monthlyDonation = {
             items: [{ plan: varPlan.id }]
           });
         }
-        res.status(200).end(); 
+        res.status(200).end();
       } else {
-        res.status(409).end(); 
+        res.status(409).end();
       }
     } catch (err) {
       error("Error from payment controller: ", err);

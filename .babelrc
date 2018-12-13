@@ -1,22 +1,8 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": ["last 2 versions"]
-        },
-        "debug": true
-      }
-    ],
-    "babel-preset-react"
-  ],
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": [
-    "transform-runtime",
-    "react-hot-loader/babel",
-    "transform-class-properties",
-    "transform-es2015-arrow-functions",
-    "async-to-promises",
-    "syntax-dynamic-import"
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    "babel-plugin-transform-es2015-arrow-functions"
   ]
 }

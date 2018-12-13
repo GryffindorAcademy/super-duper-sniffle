@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const parser = require("body-parser");
-const compression = require("compression");
 const staticMiddleware = express.static("dist");
 const helmet = require("helmet");
 const jijengeRouter = require("../../router");
@@ -21,7 +20,6 @@ if (!isProd) {
 }
 
 app.use(parser.text());
-app.use(compression());
 app.use(staticMiddleware);
 app.use(helmet());
 

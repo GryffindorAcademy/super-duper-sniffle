@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import { CardElement, injectStripe } from "react-stripe-elements";
 import Navigation from "./NavigationBar.jsx";
 import Footer from "./Footer.jsx";
@@ -123,7 +122,9 @@ class Donate extends Component {
           alert("Thank you for your donation!");
           history.push("/VisitAfrica");
         } else if (response.status === 409) {
-          alert("It seems there is an error with your personal information, please try again");
+          alert(
+            "It seems there is an error with your personal information, please try again"
+          );
         }
       } catch (err) {
         console.log(err);
