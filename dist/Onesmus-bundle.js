@@ -19,7 +19,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"images/onesmusStory.jpg\";\n\n//# sourceURL=webpack:///./src/images/onesmusStory.jpg?");
+eval("module.exports = __webpack_require__.p + \"src/images/onesmusStory.jpg\";\n\n//# sourceURL=webpack:///./src/images/onesmusStory.jpg?");
 
 /***/ })
 

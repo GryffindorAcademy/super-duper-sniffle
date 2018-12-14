@@ -25,7 +25,12 @@ const WebNav = () => (
         Give monthly
       </Link>
     </div>
-    {/* <div className="navigation__item"><Link className="navigation__link" to='/MeetTheStudents'>Our students</Link></div> */}
+    {/* Turn off Students when done */}
+    <div className="navigation__item">
+      <Link className="navigation__link" to="/MeetTheStudents">
+        Our students
+      </Link>
+    </div>
     <div className="navigation__item">
       <Link className="navigation__link" to="/Team">
         Team
