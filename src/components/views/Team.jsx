@@ -102,6 +102,16 @@ export default class Team extends Component {
               bio={Daniel.bio}
             />
           </div>
+
+          <div className="row">
+            <TeamMember
+              image={Cole.image}
+              firstname={Cole.firstname}
+              fullname={Cole.fullname}
+              role={Cole.role}
+              bio={Cole.bio}
+            />
+          </div>
         </section>
         <Footer />
       </div>

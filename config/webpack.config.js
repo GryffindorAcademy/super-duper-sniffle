@@ -73,13 +73,13 @@ const common = {
         ]
       },
       {
-        test: /\.(jpg|gif|png|jpeg)$/,
+        test: /\.(gif|png|jpe?g)$/,
         use: [
           {
             loader: "file-loader",
             options: {
               //Images folder in the src directory
-              name: "images/[name].[ext]"
+              name: "[path][name].[ext]"
             }
           }
         ]

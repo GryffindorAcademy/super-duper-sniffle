@@ -3,7 +3,7 @@
 ////////////////////////////
 
 export const DrJohn = {
-  image: "./images/drjohn.jpg",
+  image: require("./images/drjohn.jpg"),
   firstname: "John",
   fullname: "Dr. John Mucoki",
   role: "Program Manager & Dean of Students",
@@ -21,7 +21,7 @@ export const DrJohn = {
 };
 
 export const Vassiliki = {
-  image: "./images/vassia.jpg",
+  image: require("./images/vassia.jpg"),
   firstname: "Vassiliki",
   fullname: "Vassiliki Daskalakis",
   role: "CEO",
@@ -38,7 +38,7 @@ export const Vassiliki = {
 };
 
 export const Jacob = {
-  image: "./images/jacob.jpg",
+  image: require("./images/jacob.jpg"),
   firstname: "Jacob",
   fullname: "Jacob Reisch",
   role: "Board Member",
@@ -54,7 +54,7 @@ export const Jacob = {
 };
 
 export const Isabella = {
-  image: "./images/isabellasPicture.jpg",
+  image: require("./images/isabellasPicture.jpg"),
   firstname: "Isabella",
   fullname: "Isabella Beltran",
   role: "Software Engineer",
@@ -63,7 +63,7 @@ export const Isabella = {
 };
 
 export const Sam = {
-  image: "./images/sam.jpg",
+  image: require("./images/sam.jpg"),
   firstname: "Sam",
   fullname: "Sam Langer",
   role: "Board Member",
@@ -76,7 +76,7 @@ export const Sam = {
 };
 
 export const Daniel = {
-  image: "./images/DanielMbogoh.jpg",
+  image: require("./images/DanielMbogoh.jpg"),
   firstname: "Daniel",
   fullname: "Daniel Mbogoh",
   role: "Director of Communications",
@@ -100,7 +100,7 @@ export const Daniel = {
 };
 
 export const Cole = {
-  image: "",
+  image: require("./images/ColeMichaels.jpg"),
   firstname: "Cole",
   fullname: "Cole Michaels",
   role: "Full Stack Engineer",
