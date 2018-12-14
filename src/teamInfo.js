@@ -109,10 +109,12 @@ const Cole = {
   and completing the Hack Reactor bootcamp in Los Angeles.`
 };
 
-const rowOne = [DrJohn, Vassiliki, Jacob];
+//////////////////////////////////////////////
+// Keep each row to a max of 3 team members //
+//////////////////////////////////////////////
 
-const rowTwo = [Isabella, Sam, Daniel];
-
-const rowThree = [Cole];
-
-export const teamMatrix = [rowOne, rowTwo, rowThree];
+export const teamMatrix = [
+  [DrJohn, Vassiliki, Jacob],
+  [Isabella, Sam, Daniel],
+  [Cole]
+];
