@@ -8,7 +8,9 @@ const jijengeRouter = require("../../router");
 const isProd = process.env.NODE_ENV === "production";
 if (!isProd) {
   const webpack = require("webpack");
-  const config = require("../../../../config/webpack.dev");
+  const config = require("../../../../config/webpack.config")({
+    NODE_ENV: "development"
+  });
   const compiler = webpack(config);
   const webpackDevMiddleware = require("webpack-dev-middleware")(
     compiler,

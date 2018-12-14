@@ -4,8 +4,8 @@
   "description": "A website for the kids of Mogra School",
   "main": "index.js",
   "scripts": {
-    "build": "BABEL_ENV=production webpack --config=config/webpack.prod.js --env.NODE_ENV=production",
-    "build:dev": "webpack --config=config/webpack.dev.js",
+    "build": "BABEL_ENV=production webpack --config=config/webpack.config.js --mode production --env.NODE_ENV=production",
+    "build:dev": "webpack --config=config/webpack.config.js --mode development --env.NODE_ENV=development",
     "dev": "nodemon --inspect --watch src/rest-server --watch config src/rest-server/main.js",
     "prod": "NODE_ENV=production nodemon src/rest-server/main.js"
   },

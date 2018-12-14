@@ -2,14 +2,8 @@ const path = require("path");
 const webpack = require("webpack");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
-  entry: ["@babel/polyfill", "./src/index.js"],
+const dev = {
   mode: "development",
-  output: {
-    filename: "[name]-bundle.js",
-    path: path.resolve(__dirname, "../dist"),
-    publicPath: "/"
-  },
   devServer: {
     contentBase: "dist",
     overlay: true,
@@ -17,6 +11,36 @@ module.exports = {
     stats: {
       color: true
     }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new HTMLWebpackPlugin({
+      template: "./src/index.html",
+      inject: true,
+      title: "Jijenge"
+    })
+  ]
+};
+
+const prod = {
+  mode: "production",
+  plugins: [
+    new webpack.NamedModulesPlugin(),
+    new HTMLWebpackPlugin({
+      template: "./src/index.html",
+      inject: true,
+      title: "Jijenge"
+    })
+  ]
+};
+
+const common = {
+  entry: ["@babel/polyfill", "./src/index.js"],
+  output: {
+    filename: "[name]-bundle.js",
+    path: path.resolve(__dirname, "../dist"),
+    publicPath: "/"
   },
   module: {
     rules: [
@@ -31,14 +55,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          }
-        ]
+        use: [{ loader: "style-loader" }, { loader: "css-loader" }]
       },
       {
         test: /\.(sass|scss)$/,
@@ -53,9 +70,7 @@ module.exports = {
         use: [
           {
             loader: "html-loader",
-            options: {
-              attrs: ["img:src"]
-            }
+            options: { attrs: ["img:src"] }
           }
         ]
       },
@@ -83,19 +98,14 @@ module.exports = {
         ]
       }
     ]
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-    new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify("development")
-      }
-    }),
-    new HTMLWebpackPlugin({
-      template: "./src/index.html",
-      inject: true,
-      title: "Jijenge"
-    })
-  ]
+  }
+};
+
+module.exports = env => {
+  if (env.NODE_ENV === "development") {
+    return Object.assign({}, common, dev);
+  }
+  if (env.NODE_ENV === "production") {
+    return Object.assign({}, common, prod);
+  }
 };
