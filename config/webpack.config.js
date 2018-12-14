@@ -14,7 +14,6 @@ const dev = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
     new HTMLWebpackPlugin({
       template: "./src/index.html",
       inject: true,
@@ -26,7 +25,6 @@ const dev = {
 const prod = {
   mode: "production",
   plugins: [
-    new webpack.NamedModulesPlugin(),
     new HTMLWebpackPlugin({
       template: "./src/index.html",
       inject: true,
