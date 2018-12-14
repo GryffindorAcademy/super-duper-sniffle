@@ -1,22 +1,8 @@
 import React, { Component } from "react";
 import Footer from "../Footer.jsx";
 import TeamMember from "../TeamMember.jsx";
-// import DrJohn from "../../images/drjohn.jpg";
-// import Sam from "../../images/sam.jpg";
-// import Vassiliki from "../../images/vassia.jpg";
-// import Isabella from "../../images/isabellasPicture.jpg";
-// import Jacob from "../../images/jacob.jpg";
-// import Daniel from "../../images/DanielMbogoh.jpg";
 import ScrollToTop from "../ScrollToTop.jsx";
-import {
-  DrJohn,
-  Vassiliki,
-  Jacob,
-  Isabella,
-  Sam,
-  Daniel,
-  Cole
-} from "../../teamInfo";
+import { teamMatrix } from "../../teamInfo";
 
 export default class Team extends Component {
   constructor() {
@@ -55,63 +41,19 @@ export default class Team extends Component {
           <div className="teamHeading">
             <div className="primaryHeading">Team</div>
           </div>
-          <div className="row">
-            <TeamMember
-              image={DrJohn.image}
-              firstname={DrJohn.firstname}
-              fullname={DrJohn.fullname}
-              role={DrJohn.role}
-              bio={DrJohn.bio}
-            />
-            <TeamMember
-              image={Vassiliki.image}
-              firstname={Vassiliki.firstname}
-              fullname={Vassiliki.fullname}
-              role={Vassiliki.role}
-              bio={Vassiliki.bio}
-            />
-            <TeamMember
-              image={Jacob.image}
-              firstname={Jacob.firstname}
-              fullname={Jacob.fullname}
-              role={Jacob.role}
-              bio={Jacob.bio}
-            />
-          </div>
-
-          <div className="row">
-            <TeamMember
-              image={Isabella.image}
-              firstname={Isabella.firstname}
-              fullname={Isabella.fullname}
-              role={Isabella.role}
-              bio={Isabella.bio}
-            />
-            <TeamMember
-              image={Sam.image}
-              firstname={Sam.firstname}
-              fullname={Sam.fullname}
-              role={Sam.role}
-              bio={Sam.bio}
-            />
-            <TeamMember
-              image={Daniel.image}
-              firstname={Daniel.firstname}
-              fullname={Daniel.fullname}
-              role={Daniel.role}
-              bio={Daniel.bio}
-            />
-          </div>
-
-          <div className="row">
-            <TeamMember
-              image={Cole.image}
-              firstname={Cole.firstname}
-              fullname={Cole.fullname}
-              role={Cole.role}
-              bio={Cole.bio}
-            />
-          </div>
+          {teamMatrix.map(row => (
+            <div className="row">
+              {row.map(col => (
+                <TeamMember
+                  image={col.image}
+                  firstname={col.firstname}
+                  fullname={col.fullname}
+                  role={col.role}
+                  bio={col.bio}
+                />
+              ))}
+            </div>
+          ))}
         </section>
         <Footer />
       </div>

@@ -2,7 +2,7 @@
 // Put all team info here //
 ////////////////////////////
 
-export const DrJohn = {
+const DrJohn = {
   image: require("./images/drjohn.jpg"),
   firstname: "John",
   fullname: "Dr. John Mucoki",
@@ -20,7 +20,7 @@ export const DrJohn = {
   as apprenticeship for the high school graduates.`
 };
 
-export const Vassiliki = {
+const Vassiliki = {
   image: require("./images/vassia.jpg"),
   firstname: "Vassiliki",
   fullname: "Vassiliki Daskalakis",
@@ -37,7 +37,7 @@ export const Vassiliki = {
   Kenyan Tech Companies.`
 };
 
-export const Jacob = {
+const Jacob = {
   image: require("./images/jacob.jpg"),
   firstname: "Jacob",
   fullname: "Jacob Reisch",
@@ -53,7 +53,7 @@ export const Jacob = {
   Entrepreneurship@Cornell Advisory Council.`
 };
 
-export const Isabella = {
+const Isabella = {
   image: require("./images/isabellasPicture.jpg"),
   firstname: "Isabella",
   fullname: "Isabella Beltran",
@@ -62,7 +62,7 @@ export const Isabella = {
   organizations reach their highest potential.`
 };
 
-export const Sam = {
+const Sam = {
   image: require("./images/sam.jpg"),
   firstname: "Sam",
   fullname: "Sam Langer",
@@ -75,7 +75,7 @@ export const Sam = {
   dream.`
 };
 
-export const Daniel = {
+const Daniel = {
   image: require("./images/DanielMbogoh.jpg"),
   firstname: "Daniel",
   fullname: "Daniel Mbogoh",
@@ -99,7 +99,7 @@ export const Daniel = {
   non-profit organizations in Kenya through film.`
 };
 
-export const Cole = {
+const Cole = {
   image: require("./images/ColeMichaels.jpg"),
   firstname: "Cole",
   fullname: "Cole Michaels",
@@ -108,3 +108,11 @@ export const Cole = {
   slept I taught myself Java fundamentals which lead to me going to 
   and completing the Hack Reactor bootcamp in Los Angeles.`
 };
+
+const rowOne = [DrJohn, Vassiliki, Jacob];
+
+const rowTwo = [Isabella, Sam, Daniel];
+
+const rowThree = [Cole];
+
+export const teamMatrix = [rowOne, rowTwo, rowThree];
