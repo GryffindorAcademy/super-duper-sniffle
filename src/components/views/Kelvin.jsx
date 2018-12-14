@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Footer from "../Footer.jsx";
 import kelvinStory from "../../images/kelvinStory.jpg";
+import ScrollToTop from "../ScrollToTop.jsx";
 
 export default class Kelvin extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export default class Kelvin extends Component {
   render() {
     return (
       <div>
+        <ScrollToTop />
         <div className="kelvinHeader">
           <div className="kelvinHeader__background">
             <div className="kelvinHeader__title">Hi, I'm Kelvin Voke</div>

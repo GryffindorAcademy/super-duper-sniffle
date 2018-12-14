@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import ScrollToTop from "./ScrollToTop.jsx";
 
 const MobileNav = () => (
   <div className="dropbtn">
@@ -47,7 +46,6 @@ const WebNav = () => (
 
 const NavigationBar = () => (
   <nav className="navigation">
-    <ScrollToTop />
     <div className="navigation__logo">
       <Link className="navigation__linkMain" to="/">
         Jijenge

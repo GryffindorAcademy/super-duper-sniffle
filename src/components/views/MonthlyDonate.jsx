@@ -3,6 +3,7 @@ import { CardElement, injectStripe } from "react-stripe-elements";
 import Footer from "../Footer.jsx";
 import donate1 from "../../images/donateMonthly1.jpg";
 import donate2 from "../../images/donateMonthly2.jpg";
+import ScrollToTop from "../ScrollToTop.jsx";
 
 class Donate extends Component {
   constructor(props) {
@@ -134,6 +135,7 @@ class Donate extends Component {
   render() {
     return (
       <div>
+        <ScrollToTop />
         <section id="section-donation">
           <div className="donateBackground">
             <div className="donateBackground__heading">

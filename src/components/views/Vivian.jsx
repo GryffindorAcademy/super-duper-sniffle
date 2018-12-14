@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Footer from "../Footer.jsx";
 import vivianStory from "../../images/ourVivian.jpg";
+import ScrollToTop from "../ScrollToTop.jsx";
 
 export default class Vivian extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export default class Vivian extends Component {
   render() {
     return (
       <div>
+        <ScrollToTop />
         <div className="vivianHeader">
           <div className="vivianHeader__background">
             <div className="vivianHeader__title">Hi, I'm Vivian Achieng</div>

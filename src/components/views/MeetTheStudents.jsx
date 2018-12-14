@@ -9,6 +9,7 @@ import samuel from "../../images/ourSamuel.jpg";
 import vivian from "../../images/ourVivian.jpg";
 import winnie from "../../images/ourWinnie.jpg";
 import yvonne from "../../images/ourYvonne.jpg";
+import ScrollToTop from "../ScrollToTop.jsx";
 
 export default class MeetTheStudents extends Component {
   constructor(props) {
@@ -68,6 +69,7 @@ export default class MeetTheStudents extends Component {
   render() {
     return (
       <div>
+        <ScrollToTop />
         <div className="ourStudentsHeader">
           <div className="ourStudentsHeader__text">
             We are a technology education organization

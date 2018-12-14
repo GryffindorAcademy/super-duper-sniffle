@@ -15,6 +15,8 @@ import africa6 from "../../images/africa6.jpg";
 import africa8 from "../../images/africa8.jpg";
 import africa9 from "../../images/africa9.jpg";
 
+import ScrollToTop from "../ScrollToTop.jsx";
+
 export default class VisitAfrica extends Component {
   constructor(props) {
     super(props);
@@ -77,30 +79,27 @@ export default class VisitAfrica extends Component {
   render() {
     return (
       <div>
-        <main>
-          <div className="visitHeader">
-            <div className="visitBanner">
-              <div className="primaryHeading">An inspiration vacation</div>
-              <div className="secondaryHeading">
-                Book a life changing visit to the children at Jijenge @ Nairobi.
-              </div>
-              <div className="secondaryHeading">
-                Meet the children yourself while experiencing the world's best
-                Safari tours and beach vacations!
-              </div>
-              <div className="visitBanner__container">
-                <div>
-                  <a
-                    href="http://eepurl.com/dH3L6b"
-                    className="visitBanner__container--btn"
-                  >
-                    Tailor a trip to Kenya
-                  </a>
-                </div>
-              </div>
+        <ScrollToTop />
+        <div className="visitHeader">
+          <div className="visitBanner">
+            <div className="primaryHeading">An inspiration vacation</div>
+            <div className="secondaryHeading">
+              Book a life changing visit to the children at Jijenge @ Nairobi.
+            </div>
+            <div className="secondaryHeading">
+              Meet the children yourself while experiencing the world's best
+              Safari tours and beach vacations!
+            </div>
+            <div className="visitBanner__container">
+              <a
+                href="http://eepurl.com/dH3L6b"
+                className="visitBanner__container--btn"
+              >
+                Tailor a trip to Kenya
+              </a>
             </div>
           </div>
-        </main>
+        </div>
         <section className="section-slides">
           <div className="section-slides__heading">
             <div className="primaryHeading">Meet the children</div>

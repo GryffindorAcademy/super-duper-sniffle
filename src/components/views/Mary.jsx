@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Footer from "../Footer.jsx";
 import maryStory from "../../images/maryStory.jpg";
+import ScrollToTop from "../ScrollToTop.jsx";
 
 export default class Mary extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export default class Mary extends Component {
   render() {
     return (
       <div>
+        <ScrollToTop />
         <div className="maryHeader">
           <div className="maryHeader__background">
             <div className="maryHeader__title">Hi, I'm Mary Achieng</div>

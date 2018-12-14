@@ -6,6 +6,7 @@ import Vassiliki from "../../images/vassia.jpg";
 import Isabella from "../../images/isabellasPicture.jpg";
 import Jacob from "../../images/jacob.jpg";
 import Daniel from "../../images/DanielMbogoh.jpg";
+import ScrollToTop from "../ScrollToTop.jsx";
 
 export default class Team extends Component {
   constructor() {
@@ -31,6 +32,7 @@ export default class Team extends Component {
   render() {
     return (
       <div>
+        <ScrollToTop />
         <header>
           <div className="team" />
           <div className="teamQuote">

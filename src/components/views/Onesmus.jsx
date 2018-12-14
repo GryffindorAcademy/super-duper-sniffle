@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Footer from "../Footer.jsx";
 import onesmusStory from "../../images/onesmusStory.jpg";
+import ScrollToTop from "../ScrollToTop.jsx";
 
 export default class Onesmus extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export default class Onesmus extends Component {
   render() {
     return (
       <div>
+        <ScrollToTop />
         <div className="onesmusHeader">
           <div className="onesmusHeader__background">
             <div className="onesmusHeader__title">Hi, I'm Onesmus Achieng</div>
