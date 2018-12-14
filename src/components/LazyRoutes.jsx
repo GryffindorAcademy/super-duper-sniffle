@@ -1,53 +1,53 @@
 import { lazy } from "react";
 
 export const Home = lazy(() =>
-  import(/* webpackChunkName: "Home" */ "./Home.jsx")
+  import(/* webpackChunkName: "Home" */ "./views/Home.jsx")
 );
 
 export const MeetTheStudents = lazy(() =>
-  import(/* webpackChunkName: "MeetTheStudents" */ "./MeetTheStudents.jsx")
+  import(/* webpackChunkName: "MeetTheStudents" */ "./views/MeetTheStudents.jsx")
 );
 
 export const Team = lazy(() =>
-  import(/* webpackChunkName: "Team" */ "./Team.jsx")
+  import(/* webpackChunkName: "Team" */ "./views/Team.jsx")
 );
 
 export const Ann = lazy(() =>
-  import(/* webpackChunkName: "Ann" */ "./Ann.jsx")
+  import(/* webpackChunkName: "Ann" */ "./views/Ann.jsx")
 );
 
 export const Daniel = lazy(() =>
-  import(/* webpackChunkName: "Daniel" */ "./Daniel.jsx")
+  import(/* webpackChunkName: "Daniel" */ "./views/Daniel.jsx")
 );
 
 export const Kelvin = lazy(() =>
-  import(/* webpackChunkName: "Kelvin" */ "./Kelvin.jsx")
+  import(/* webpackChunkName: "Kelvin" */ "./views/Kelvin.jsx")
 );
 
 export const Mary = lazy(() =>
-  import(/* webpackChunkName: "Mary" */ "./Mary.jsx")
+  import(/* webpackChunkName: "Mary" */ "./views/Mary.jsx")
 );
 
 export const Onesmus = lazy(() =>
-  import(/* webpackChunkName: "Onesmus" */ "./Onesmus.jsx")
+  import(/* webpackChunkName: "Onesmus" */ "./views/Onesmus.jsx")
 );
 
 export const Samuel = lazy(() =>
-  import(/* webpackChunkName: "Samuel" */ "./Samuel.jsx")
+  import(/* webpackChunkName: "Samuel" */ "./views/Samuel.jsx")
 );
 
 export const Vivian = lazy(() =>
-  import(/* webpackChunkName: "Vivian" */ "./Vivian.jsx")
+  import(/* webpackChunkName: "Vivian" */ "./views/Vivian.jsx")
 );
 
 export const Winnie = lazy(() =>
-  import(/* webpackChunkName: "Winnie" */ "./Winnie.jsx")
+  import(/* webpackChunkName: "Winnie" */ "./views/Winnie.jsx")
 );
 
 export const Yvonne = lazy(() =>
-  import(/* webpackChunkName: "Yvonne" */ "./Yvonne.jsx")
+  import(/* webpackChunkName: "Yvonne" */ "./views/Yvonne.jsx")
 );
 
 export const VisitAfrica = lazy(() =>
-  import(/* webpackChunkName: "VisitAfrica" */ "./VisitAfrica.jsx")
+  import(/* webpackChunkName: "VisitAfrica" */ "./views/VisitAfrica.jsx")
 );

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Navigation from "./NavigationBar.jsx";
-import Footer from "./Footer.jsx";
-import kelvinStory from "../images/kelvinStory.jpg";
+import Footer from "../Footer.jsx";
+import kelvinStory from "../../images/kelvinStory.jpg";
 
 export default class Kelvin extends Component {
   constructor(props) {
@@ -84,9 +83,7 @@ export default class Kelvin extends Component {
             </div>
           </div>
         </div>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     );
   }

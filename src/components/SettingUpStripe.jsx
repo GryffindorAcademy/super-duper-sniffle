@@ -1,6 +1,6 @@
-import React, { Component } from 'react';  
-import { Elements } from 'react-stripe-elements';
-import Donate from './Donate.jsx';
+import React, { Component } from "react";
+import { Elements } from "react-stripe-elements";
+import Donate from "./views/Donate.jsx";
 
 class SettingUpStripe extends Component {
   constructor() {
@@ -8,12 +8,12 @@ class SettingUpStripe extends Component {
   }
 
   render() {
-  return (
-    <div>
-      <Elements>
-        <Donate history={this.props.history} /> 
-      </Elements>
-    </div> 
+    return (
+      <div>
+        <Elements>
+          <Donate history={this.props.history} />
+        </Elements>
+      </div>
     );
   }
 }

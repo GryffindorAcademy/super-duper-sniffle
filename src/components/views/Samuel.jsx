@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Navigation from "./NavigationBar.jsx";
-import Footer from "./Footer.jsx";
-import samuelStory from "../images/samuelStory.jpg";
+import Footer from "../Footer.jsx";
+import samuelStory from "../../images/samuelStory.jpg";
 
 export default class Samuel extends Component {
   constructor(props) {
@@ -67,9 +66,7 @@ export default class Samuel extends Component {
             </div>
           </div>
         </div>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     );
   }

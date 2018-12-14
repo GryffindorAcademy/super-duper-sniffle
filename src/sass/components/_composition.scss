@@ -1,52 +1,54 @@
 .composition {
   position: relative;
-  
+
   &__photo {
-      box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
-      border-radius: 2px;
-      position: absolute;
-      z-index: 10;
-      transition: all .2s;
-      outline-offset: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 1rem;
 
-      &--p1 {
-        width: 65%;
-        left: 20%;
-        top: 27rem;
-        @include respond(tab-port) {
-          left: 3rem;
-        }
+    &--p1 {
+      width: 65%;
+      left: 20%;
+      top: 27rem;
+      @include respond(tab-port) {
+        left: 3rem;
       }
+    }
 
-      &--p2 {
-        width: 65%;
-        left: 6rem;
-        top: 0rem;
-        @include respond(tab-port) {
-          right: 2rem;
-          top: -1rem;
-        }
+    &--p2 {
+      width: 65%;
+      left: 6rem;
+      top: 0rem;
+      @include respond(tab-port) {
+        right: 2rem;
+        top: -1rem;
       }
+    }
 
-      &--p3 {
-        width: 70%;
-        left: 6rem;
-        top: 0rem;
-        @include respond(tab-port) {
-          left: 30%;
-          top: 10rem;
-        }
+    &--p3 {
+      width: 70%;
+      left: 6rem;
+      top: 0rem;
+      @include respond(tab-port) {
+        left: 30%;
+        top: 10rem;
       }
-
-      &:hover {
-          outline: .5rem solid $color-purple;
-          transform: scale(1.05) translateY(-.5rem);
-          box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
-          z-index: 20;
-          filter: grayscale(0);
-      }
+    }
+    //////////////////////////////////////////
+    // I feel the hover looks a bit strange //
+    //////////////////////////////////////////
+    // &:hover {
+    //     outline: .5rem solid $color-purple;
+    //     transform: scale(1.05) translateY(-.5rem);
+    //     box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+    //     z-index: 20;
+    //     filter: grayscale(0);
+    // }
   }
-  &:hover &__photo:not(:hover) {
-      transform: scale(.95);
-  }
+  // &:hover &__photo:not(:hover) {
+  //   transform: scale(0.95);
+  // }
 }

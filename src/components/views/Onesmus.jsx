@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Navigation from "./NavigationBar.jsx";
-import Footer from "./Footer.jsx";
-import onesmusStory from "../images/onesmusStory.jpg";
+import Footer from "../Footer.jsx";
+import onesmusStory from "../../images/onesmusStory.jpg";
 
 export default class Onesmus extends Component {
   constructor(props) {
@@ -78,9 +77,7 @@ export default class Onesmus extends Component {
             </div>
           </div>
         </div>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     );
   }

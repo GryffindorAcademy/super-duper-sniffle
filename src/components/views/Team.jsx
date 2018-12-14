@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import Navigation from "./NavigationBar.jsx";
-import Footer from "./Footer.jsx";
-import DrJohn from "../images/drjohn.jpg";
-import Sam from "../images/sam.jpg";
-import Vassiliki from "../images/vassia.jpg";
-import Isabella from "../images/isabellasPicture.jpg";
-import Jacob from "../images/jacob.jpg";
-import Daniel from "../images/DanielMbogoh.jpg";
+import Footer from "../Footer.jsx";
+import DrJohn from "../../images/drjohn.jpg";
+import Sam from "../../images/sam.jpg";
+import Vassiliki from "../../images/vassia.jpg";
+import Isabella from "../../images/isabellasPicture.jpg";
+import Jacob from "../../images/jacob.jpg";
+import Daniel from "../../images/DanielMbogoh.jpg";
 
 export default class Team extends Component {
   constructor() {
@@ -327,9 +326,7 @@ export default class Team extends Component {
             </div>
           </div>
         </section>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     );
   }

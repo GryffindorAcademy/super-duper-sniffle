@@ -7,7 +7,7 @@ export default class Footer extends Component {
   }
   render() {
     return (
-      <div className="footer">
+      <footer className="footer">
         <div className="footer__logo">Jijenge</div>
         <div className="footer__container">
           <div className="footer__container--application">
@@ -25,7 +25,7 @@ export default class Footer extends Component {
             <div>Boston, MA 02111</div>
           </div>
         </div>
-      </div>
+      </footer>
     );
   }
 }

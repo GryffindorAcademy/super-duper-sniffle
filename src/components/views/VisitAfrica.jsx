@@ -1,20 +1,19 @@
 import React, { Component } from "react";
-import Navigation from "./NavigationBar.jsx";
-import Footer from "./Footer.jsx";
-import visit from "../images/visit.jpg";
-import visit1 from "../images/visit1.jpg";
-import visit2 from "../images/visit2.jpg";
-import visit3 from "../images/visit3.jpg";
-import visit4 from "../images/visit4.jpg";
-import visit5 from "../images/visit5.jpg";
-import visit6 from "../images/visit6.jpg";
+import Footer from "../Footer.jsx";
+import visit from "../../images/visit.jpg";
+import visit1 from "../../images/visit1.jpg";
+import visit2 from "../../images/visit2.jpg";
+import visit3 from "../../images/visit3.jpg";
+import visit4 from "../../images/visit4.jpg";
+import visit5 from "../../images/visit5.jpg";
+import visit6 from "../../images/visit6.jpg";
 
-import africa1 from "../images/africa1.jpg";
-import africa2 from "../images/africa2.jpg";
-import africa4 from "../images/africa4.jpg";
-import africa6 from "../images/africa6.jpg";
-import africa8 from "../images/africa8.jpg";
-import africa9 from "../images/africa9.jpg";
+import africa1 from "../../images/africa1.jpg";
+import africa2 from "../../images/africa2.jpg";
+import africa4 from "../../images/africa4.jpg";
+import africa6 from "../../images/africa6.jpg";
+import africa8 from "../../images/africa8.jpg";
+import africa9 from "../../images/africa9.jpg";
 
 export default class VisitAfrica extends Component {
   constructor(props) {
@@ -164,9 +163,7 @@ export default class VisitAfrica extends Component {
             </div>
           </div>
         </section>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     );
   }

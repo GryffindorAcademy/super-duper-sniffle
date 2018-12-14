@@ -40,6 +40,7 @@ class App extends Component {
       <main>
         <Navigation />
         <Switch>
+          {console.log(this.context)}
           <Suspense fallback={<div>Loading...</div>}>
             <Route exact path="/" component={Home} />
             <Route exact path="/MeetTheStudents" component={MeetTheStudents} />

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Navigation from "./NavigationBar.jsx";
-import Footer from "./Footer.jsx";
-import yvonneStory from "../images/ourYvonne.jpg";
+import Footer from "../Footer.jsx";
+import yvonneStory from "../../images/ourYvonne.jpg";
 
 export default class Yvonne extends Component {
   constructor(props) {
@@ -78,9 +77,7 @@ export default class Yvonne extends Component {
             </div>
           </div>
         </div>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     );
   }

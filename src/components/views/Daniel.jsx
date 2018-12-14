@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Navigation from "./NavigationBar.jsx";
-import Footer from "./Footer.jsx";
-import danielStory from "../images/danielStory.jpg";
+import Footer from "../Footer.jsx";
+import danielStory from "../../images/danielStory.jpg";
 
 export default class Daniel extends Component {
   constructor(props) {
@@ -103,9 +102,7 @@ export default class Daniel extends Component {
             </div>
           </div>
         </div>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     );
   }

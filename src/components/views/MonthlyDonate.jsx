@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { CardElement, injectStripe } from "react-stripe-elements";
-import Navigation from "./NavigationBar.jsx";
-import Footer from "./Footer.jsx";
-import donate from "../images/donate.jpg";
+import Footer from "../Footer.jsx";
+import donate1 from "../../images/donateMonthly1.jpg";
+import donate2 from "../../images/donateMonthly2.jpg";
 
 class Donate extends Component {
   constructor(props) {
@@ -134,7 +134,7 @@ class Donate extends Component {
   render() {
     return (
       <div>
-        <main>
+        <section id="section-donation">
           <div className="donateBackground">
             <div className="donateBackground__heading">
               <div className="donateHeaderContainer">
@@ -251,6 +251,27 @@ class Donate extends Component {
                       }}
                     />
                   </div>
+                  <div className="donationForm__formLabel">
+                    By clicking, you agree to <a href="#terms">our terms</a> and
+                    conditions.
+                  </div>
+                  <div id="terms" className="termsandconditions">
+                    <div className="termsandconditions__content">
+                      <div className="termsandconditions__right">
+                        <a
+                          href="#section-donation"
+                          className="termsandconditions__close"
+                        >
+                          &times;
+                        </a>
+                      </div>
+                      <div className="termsandconditions__left">
+                        “Jijenge Academy is a Delaware nonprofit corporation.
+                        Its application for federal recognition of section
+                        501(c)(3) charitable status is in process.”
+                      </div>
+                    </div>
+                  </div>
                   <div
                     className="donationForm__button"
                     onClick={this.submit.bind(this)}
@@ -262,17 +283,19 @@ class Donate extends Component {
               <div className="col-1-of-2">
                 <div className="composition">
                   <img
+                    className="composition__photo composition__photo--p1"
+                    src={donate1}
+                  />
+                  <img
                     className="composition__photo composition__photo--p2"
-                    src={donate}
+                    src={donate2}
                   />
                 </div>
               </div>
             </div>
           </div>
-        </main>
-        <footer>
-          <Footer />
-        </footer>
+        </section>
+        <Footer />
       </div>
     );
   }

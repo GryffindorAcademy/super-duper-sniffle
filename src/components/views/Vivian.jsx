@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Navigation from "./NavigationBar.jsx";
-import Footer from "./Footer.jsx";
-import vivianStory from "../images/ourVivian.jpg";
+import Footer from "../Footer.jsx";
+import vivianStory from "../../images/ourVivian.jpg";
 
 export default class Vivian extends Component {
   constructor(props) {
@@ -73,9 +72,7 @@ export default class Vivian extends Component {
             </div>
           </div>
         </div>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     );
   }

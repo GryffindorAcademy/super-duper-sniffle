@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Navigation from "./NavigationBar.jsx";
-import Footer from "./Footer.jsx";
-import winnieStory from "../images/winnieStory.jpg";
+import Footer from "../Footer.jsx";
+import winnieStory from "../../images/winnieStory.jpg";
 
 export default class Winnie extends Component {
   constructor(props) {
@@ -132,9 +131,7 @@ export default class Winnie extends Component {
             </div>
           </div>
         </div>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     );
   }

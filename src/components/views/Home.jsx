@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import Navigation from "./NavigationBar.jsx";
-import Header from "./Header.jsx";
-import Meaning from "./Meaning.jsx";
-import Action from "./Action.jsx";
-import Subscribe from "./Subscribe.jsx";
-import Footer from "./Footer.jsx";
+import Header from "../Header.jsx";
+import Meaning from "../Meaning.jsx";
+import Action from "../Action.jsx";
+import Footer from "../Footer.jsx";
 
 class Home extends Component {
   constructor() {
@@ -23,9 +21,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <header>
-          <Header history={this.props.history} />
-        </header>
+        <Header history={this.props.history} />
         <main>
           <section className="section-meaning">
             <Meaning />
@@ -34,9 +30,7 @@ class Home extends Component {
             <Action history={this.props.history} />
           </section>
         </main>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>
     );
   }
