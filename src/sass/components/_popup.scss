@@ -1,14 +1,14 @@
-//DR. JOHN 
-.johnPopup {
-  height: 100vh; 
-  width: 100%; 
+//DR. JOHN
+.JohnPopup {
+  height: 100vh;
+  width: 100%;
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
-  background-color: rgba($color-black, .6);
+  background-color: rgba($color-black, 0.6);
   z-index: 1000;
   opacity: 0;
-  visibility: hidden; 
+  visibility: hidden;
 
   &:target {
     opacity: 1;
@@ -16,13 +16,13 @@
   }
 
   &__close {
-    &:link, 
+    &:link,
     &:visited {
-      color: $dark-grey; 
+      color: $dark-grey;
       position: absolute;
       top: 1rem;
-      right: 2rem; 
-      font-size: 2.5rem; 
+      right: 2rem;
+      font-size: 2.5rem;
       text-decoration: none;
       display: inline-block;
       @include respond(small) {
@@ -40,14 +40,13 @@
   }
 
   &__content {
-    @include absCenter; 
-    width: 50%; 
+    @include absCenter;
+    width: 50%;
     background-color: $color-white;
-    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     @include respond(small) {
-      width: 65%; 
+      width: 65%;
     }
-
   }
   &__right {
     margin-top: 2rem;
@@ -64,7 +63,7 @@
     }
     &--img {
       height: 100%;
-      transform: translateY(5.5rem) translateX(.9rem) scale(1.7);
+      transform: translateY(5.5rem) translateX(0.9rem) scale(1.7);
       backface-visibility: hidden;
     }
   }
@@ -72,28 +71,27 @@
     color: $color-pink;
     font-size: 1.5rem;
     padding-top: 1rem;
-    padding-right: 2rem; 
+    padding-right: 2rem;
     padding-left: 2rem;
     padding-bottom: 4rem;
     @include respond(small) {
       font-size: 2.5em;
     }
-  } 
+  }
 }
-
 
 // VASSILIKI DASKALAKIS
 
-.popup {
-  height: 100vh; 
-  width: 100%; 
+.VassilikiPopup {
+  height: 100vh;
+  width: 100%;
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
-  background-color: rgba($color-black, .6);
+  background-color: rgba($color-black, 0.6);
   z-index: 1000;
   opacity: 0;
-  visibility: hidden; 
+  visibility: hidden;
 
   &:target {
     opacity: 1;
@@ -101,13 +99,13 @@
   }
 
   &__close {
-    &:link, 
+    &:link,
     &:visited {
-      color: $dark-grey; 
+      color: $dark-grey;
       position: absolute;
       top: 1rem;
-      right: 2rem; 
-      font-size: 2.5rem; 
+      right: 2rem;
+      font-size: 2.5rem;
       text-decoration: none;
       display: inline-block;
       @include respond(small) {
@@ -125,12 +123,12 @@
   }
 
   &__content {
-    @include absCenter; 
-    width: 50%; 
+    @include absCenter;
+    width: 50%;
     background-color: $color-white;
-    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     @include respond(small) {
-      width: 65%; 
+      width: 65%;
     }
   }
   &__right {
@@ -148,7 +146,7 @@
     }
     &--img {
       height: 100%;
-      transform: translateY(2.5rem) translateX(-.5rem) scale(1.7);
+      transform: translateY(2.5rem) translateX(-0.5rem) scale(1.7);
       backface-visibility: hidden;
     }
   }
@@ -156,27 +154,27 @@
     color: $color-pink;
     font-size: 1.5rem;
     padding-top: 1rem;
-    padding-right: 2rem; 
+    padding-right: 2rem;
     padding-left: 2rem;
     padding-bottom: 4rem;
     @include respond(small) {
       font-size: 2.5em;
     }
-  } 
+  }
 }
 
-// JACOB REISCH 
+// JACOB REISCH
 
-.jakePopup {
-  height: 100vh; 
-  width: 100%; 
+.JacobPopup {
+  height: 100vh;
+  width: 100%;
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
-  background-color: rgba($color-black, .6);
+  background-color: rgba($color-black, 0.6);
   z-index: 1000;
   opacity: 0;
-  visibility: hidden; 
+  visibility: hidden;
 
   &:target {
     opacity: 1;
@@ -184,13 +182,13 @@
   }
 
   &__close {
-    &:link, 
+    &:link,
     &:visited {
-      color: $dark-grey; 
+      color: $dark-grey;
       position: absolute;
       top: 1rem;
-      right: 2rem; 
-      font-size: 2.5rem; 
+      right: 2rem;
+      font-size: 2.5rem;
       text-decoration: none;
       display: inline-block;
       @include respond(small) {
@@ -208,12 +206,12 @@
   }
 
   &__content {
-    @include absCenter; 
-    width: 50%; 
+    @include absCenter;
+    width: 50%;
     background-color: $color-white;
-    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     @include respond(small) {
-      width: 65%; 
+      width: 65%;
     }
   }
   &__right {
@@ -239,27 +237,27 @@
     color: $color-pink;
     font-size: 1.5rem;
     padding-top: 1rem;
-    padding-right: 2rem; 
+    padding-right: 2rem;
     padding-left: 2rem;
     padding-bottom: 4rem;
     @include respond(small) {
       font-size: 2.5em;
     }
-  } 
+  }
 }
 
 //ISABELLA BELTRAN
 
-.isabellaPopup {
-  height: 100vh; 
-  width: 100%; 
+.IsabellaPopup {
+  height: 100vh;
+  width: 100%;
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
-  background-color: rgba($color-black, .6);
+  background-color: rgba($color-black, 0.6);
   z-index: 1000;
   opacity: 0;
-  visibility: hidden; 
+  visibility: hidden;
 
   &:target {
     opacity: 1;
@@ -267,13 +265,13 @@
   }
 
   &__close {
-    &:link, 
+    &:link,
     &:visited {
-      color: $dark-grey; 
+      color: $dark-grey;
       position: absolute;
       top: 1rem;
-      right: 2rem; 
-      font-size: 2.5rem; 
+      right: 2rem;
+      font-size: 2.5rem;
       text-decoration: none;
       display: inline-block;
       @include respond(small) {
@@ -291,14 +289,13 @@
   }
 
   &__content {
-    @include absCenter; 
-    width: 50%; 
+    @include absCenter;
+    width: 50%;
     background-color: $color-white;
-    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     @include respond(small) {
-      width: 65%; 
+      width: 65%;
     }
-
   }
   &__right {
     margin-top: 2rem;
@@ -315,7 +312,7 @@
     }
     &--img {
       height: 100%;
-      transform: translateY(2.5rem) translateX(-.5rem) scale(1.7);
+      transform: translateY(2.5rem) translateX(-0.5rem) scale(1.7);
       backface-visibility: hidden;
     }
   }
@@ -323,27 +320,27 @@
     color: $color-pink;
     font-size: 1.5rem;
     padding-top: 1rem;
-    padding-right: 2rem; 
+    padding-right: 2rem;
     padding-left: 2rem;
     padding-bottom: 4rem;
     @include respond(small) {
       font-size: 2.5em;
     }
-  } 
+  }
 }
 
 //SAM LANGER
 
-.samPopup {
-  height: 100vh; 
-  width: 100%; 
+.SamPopup {
+  height: 100vh;
+  width: 100%;
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
-  background-color: rgba($color-black, .6);
+  background-color: rgba($color-black, 0.6);
   z-index: 1000;
   opacity: 0;
-  visibility: hidden; 
+  visibility: hidden;
 
   &:target {
     opacity: 1;
@@ -351,13 +348,13 @@
   }
 
   &__close {
-    &:link, 
+    &:link,
     &:visited {
-      color: $dark-grey; 
+      color: $dark-grey;
       position: absolute;
       top: 1rem;
-      right: 2rem; 
-      font-size: 2.5rem; 
+      right: 2rem;
+      font-size: 2.5rem;
       text-decoration: none;
       display: inline-block;
       @include respond(small) {
@@ -375,12 +372,12 @@
   }
 
   &__content {
-    @include absCenter; 
-    width: 50%; 
+    @include absCenter;
+    width: 50%;
     background-color: $color-white;
-    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     @include respond(small) {
-      width: 65%; 
+      width: 65%;
     }
   }
   &__right {
@@ -398,7 +395,7 @@
     }
     &--img {
       height: 100%;
-      transform: translateY(3.5rem) translateX(-.1rem) scale(1.7);
+      transform: translateY(3.5rem) translateX(-0.1rem) scale(1.7);
       backface-visibility: hidden;
     }
   }
@@ -406,27 +403,27 @@
     color: $color-pink;
     font-size: 1.5rem;
     padding-top: 1rem;
-    padding-right: 2rem; 
+    padding-right: 2rem;
     padding-left: 2rem;
     padding-bottom: 4rem;
     @include respond(small) {
       font-size: 2.5em;
     }
-  } 
+  }
 }
 
 //DANIEL KING
 
-.danielPopup {
-  height: 100vh; 
-  width: 100%; 
+.DanielPopup {
+  height: 100vh;
+  width: 100%;
   position: fixed;
-  top: 0; 
+  top: 0;
   left: 0;
-  background-color: rgba($color-black, .6);
+  background-color: rgba($color-black, 0.6);
   z-index: 1000;
   opacity: 0;
-  visibility: hidden; 
+  visibility: hidden;
 
   &:target {
     opacity: 1;
@@ -434,13 +431,13 @@
   }
 
   &__close {
-    &:link, 
+    &:link,
     &:visited {
-      color: $dark-grey; 
+      color: $dark-grey;
       position: absolute;
       top: 1rem;
-      right: 2rem; 
-      font-size: 2.5rem; 
+      right: 2rem;
+      font-size: 2.5rem;
       text-decoration: none;
       display: inline-block;
       @include respond(small) {
@@ -458,12 +455,12 @@
   }
 
   &__content {
-    @include absCenter; 
-    width: 50%; 
+    @include absCenter;
+    width: 50%;
     background-color: $color-white;
-    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     @include respond(small) {
-      width: 65%; 
+      width: 65%;
     }
   }
   &__right {
@@ -489,11 +486,11 @@
     color: $color-pink;
     font-size: 1.5rem;
     padding-top: 1rem;
-    padding-right: 2rem; 
+    padding-right: 2rem;
     padding-left: 2rem;
     padding-bottom: 4rem;
     @include respond(small) {
       font-size: 2.5em;
     }
-  } 
+  }
 }
