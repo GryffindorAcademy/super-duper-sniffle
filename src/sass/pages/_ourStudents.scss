@@ -47,16 +47,14 @@
   text-align: center;
 
   &__eachStudent {
-    background-color: $color-blue;
     display: inline-block;
     width: 30rem;
-    height: 50rem;
+    height: 51rem;
     text-align: center;
     padding: 1rem;
     margin-bottom: 3rem;
     vertical-align: top;
     position: relative;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     @include respond(phone) {
       height: 43rem;
     }
@@ -72,18 +70,15 @@
     }
 
     &--picture img {
+      object-fit: cover;
       height: 25rem;
-    }
-    &--pictureDaniel img {
-      width: 21rem;
-    }
-    &--pictureWinnie img {
-      width: 19.5rem;
+      width: 20rem;
+      border: solid $color-blue;
     }
     &--info {
       &-title {
         font-size: 2rem;
-        color: $color-white;
+        color: $color-blue;
         margin-top: 1rem;
         @include respond(phone) {
           font-size: 3rem;
@@ -91,7 +86,7 @@
       }
       &-subtitle {
         font-size: 1.5rem;
-        color: $color-white;
+        color: $color-pink;
         font-weight: 300;
         margin-top: 1rem;
         @include respond(phone) {

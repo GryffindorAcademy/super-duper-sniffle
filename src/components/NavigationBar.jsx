@@ -26,11 +26,11 @@ const WebNav = () => (
       </Link>
     </div>
     {/* Turn off Students when done */}
-    <div className="navigation__item">
+    {/* <div className="navigation__item">
       <Link className="navigation__link" to="/MeetTheStudents">
         Our students
       </Link>
-    </div>
+    </div> */}
     <div className="navigation__item">
       <Link className="navigation__link" to="/Team">
         Team
