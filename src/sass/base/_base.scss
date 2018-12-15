@@ -8,6 +8,11 @@
 
 /* 100% will let the user change the fontsize to any size they need 
 THIS DEFINES WHAT 1 REM SHOULD BE */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 html {
   font-size: 62.5%;
