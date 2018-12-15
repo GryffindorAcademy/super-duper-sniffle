@@ -13,27 +13,28 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import SettingUpStripe from "./SettingUpStripe.jsx";
 import SettingUpStripeMonthly from "./SettingUpStripeMonthly.jsx";
-import {
-  Home,
-  MeetTheStudents,
-  Team,
-  Ann,
-  Daniel,
-  Kelvin,
-  Mary,
-  Onesmus,
-  Samuel,
-  Vivian,
-  Winnie,
-  Yvonne,
-  VisitAfrica
-} from "./LazyRoutes.jsx";
+import { Home, MeetTheStudents, Team, VisitAfrica } from "./LazyRoutes.jsx";
+import StudentPage from "./StudentPage.jsx";
+import studentAnswers from "../studentAnswers";
 
 library.add(fab, faCheckSquare, faSearch, faBars, faEnvelope, faPhoneSquare);
 
 class App extends Component {
   constructor() {
     super();
+    this.state = {
+      studentNames: [
+        "Ann",
+        "Daniel",
+        "Kelvin",
+        "Mary",
+        "Onesmus",
+        "Samuel",
+        "Vivian",
+        "Winnie",
+        "Yvonne"
+      ]
+    };
   }
   render() {
     return (
@@ -68,15 +69,13 @@ class App extends Component {
               )}
             />
             <Route exact path="/Team" component={Team} />
-            <Route exact path="/Ann" component={Ann} />
-            <Route exact path="/Daniel" component={Daniel} />
-            <Route exact path="/Kelvin" component={Kelvin} />
-            <Route exact path="/Mary" component={Mary} />
-            <Route exact path="/Onesmus" component={Onesmus} />
-            <Route exact path="/Samuel" component={Samuel} />
-            <Route exact path="/Vivian" component={Vivian} />
-            <Route exact path="/Winnie" component={Winnie} />
-            <Route exact path="/Yvonne" component={Yvonne} />
+            {this.state.studentNames.map((name, i) => (
+              <Route
+                exact
+                path={`/${name}`}
+                render={() => <StudentPage {...studentAnswers[i]} />}
+              />
+            ))}
             <Route exact path="/VisitAfrica" component={VisitAfrica} />
           </Suspense>
         </Switch>

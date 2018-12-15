@@ -1,5 +1,4 @@
-// Make background colors functional
-// UNIVERSAL
+// UNIVERSAL HEADER
 .annHeader,
 .danielHeader,
 .kelvinHeader,
@@ -44,7 +43,6 @@
   text-align: center;
 
   &__container {
-    background-color: rgba($pink, 0.7);
     margin-top: 2rem;
     margin-bottom: 4rem;
     padding: 2rem 3rem;
@@ -65,7 +63,6 @@
   }
   &__containerQuestions {
     margin: 0 auto;
-    background-color: rgba($pink, 0.9);
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: 1rem;
@@ -99,56 +96,86 @@
   }
 }
 
-.annStory__picture {
-  width: 32rem;
-  border: 1rem solid $color-pink;
-  margin-top: 6rem;
+// LITERAL DECLARED SASS
+
+.annStory {
+  @include styleColors($color-pink);
+  &__picture {
+    width: 32rem;
+    border: 1rem solid $color-pink;
+    margin-top: 6rem;
+  }
 }
 
-.danielStory__picture {
-  width: 33rem;
-  border: 1rem solid $color-blue;
-  margin-top: 2rem;
+.danielStory {
+  @include styleColors($color-blue);
+  &__picture {
+    width: 33rem;
+    border: 1rem solid $color-blue;
+    margin-top: 2rem;
+  }
 }
 
-.kelvinStory__picture {
-  width: 30rem;
-  border: 1rem solid $color-purple;
-  margin-top: 3rem;
+.kelvinStory {
+  @include styleColors($color-purple);
+  &__picture {
+    width: 30rem;
+    border: 1rem solid $color-purple;
+    margin-top: 3rem;
+  }
 }
 
-.maryStory__picture {
-  width: 33rem;
-  border: 1rem solid $color-yellow;
-  margin-top: 2rem;
+.maryStory {
+  @include styleColors($color-yellow);
+  &__picture {
+    width: 33rem;
+    border: 1rem solid $color-yellow;
+    margin-top: 2rem;
+  }
 }
 
-.onesmusStory__picture {
-  width: 25rem;
-  border: 1rem solid $color-pink;
-  margin-top: 2rem;
+.onesmusStory {
+  @include styleColors($color-pink);
+  &__picture {
+    width: 25rem;
+    border: 1rem solid $color-pink;
+    margin-top: 2rem;
+  }
 }
 
-.samuelStory__picture {
-  width: 30rem;
-  border: 1rem solid $color-blue;
-  margin-top: 2rem;
+.samuelStory {
+  @include styleColors($color-blue);
+  &__picture {
+    width: 30rem;
+    border: 1rem solid $color-blue;
+    margin-top: 2rem;
+  }
 }
 
-.vivianStory__picture {
-  width: 30rem;
-  border: 1rem solid $color-purple;
-  margin-top: 2rem;
+.vivianStory {
+  @include styleColors($color-purple);
+  &__picture {
+    width: 30rem;
+    border: 1rem solid $color-purple;
+    margin-top: 2rem;
+  }
 }
 
-.winnieStory__picture {
-  width: 30rem;
-  border: 1rem solid $color-yellow;
-  margin-top: 2rem;
-  vertical-align: top;
+.winnieStory {
+  @include styleColors($color-yellow);
+  &__picture {
+    width: 30rem;
+    border: 1rem solid $color-yellow;
+    margin-top: 2rem;
+    vertical-align: top;
+  }
 }
-.yvonneStory__picture {
-  width: 22rem;
-  border: 1rem solid $color-pink;
-  margin-top: 2rem;
+
+.yvonneStory {
+  @include styleColors($color-pink);
+  &__picture {
+    width: 22rem;
+    border: 1rem solid $color-pink;
+    margin-top: 2rem;
+  }
 }
