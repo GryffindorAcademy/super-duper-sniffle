@@ -67,7 +67,7 @@
       display: inline-block;
       padding: 1rem 2.3rem;
       font-size: 1.3rem;
-      color: $color-white;
+      color: $color-purple;
       cursor: pointer;
       border: solid $color-purple thin;
       border-radius: 0.5rem;
@@ -75,6 +75,7 @@
     }
     &--btn:hover {
       background-color: $color-purple;
+      color: $color-white;
       transform: translateY(-0.5rem) scale(1.01);
       box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     }
