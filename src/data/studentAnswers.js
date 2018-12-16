@@ -1,5 +1,6 @@
 export const Ann = {
-  image: require("./images/annStory.jpg"),
+  url: "Ann",
+  image: require("../images/annStory.jpg"),
   firstname: "ann",
   fullname: "Ann Ndunge",
   textOne: `I got interested in computers back in 2014 just after joining
@@ -62,7 +63,8 @@ export const Ann = {
 };
 
 const Daniel = {
-  image: require("./images/ourDaniel.jpg"),
+  url: "Daniel",
+  image: require("../images/ourDaniel.jpg"),
   firstname: "daniel",
   fullname: "Daniel Achieng",
   textOne: `When I was in high school I inspired to do computer science, but
@@ -131,7 +133,8 @@ const Daniel = {
 };
 
 const Kelvin = {
-  image: require("./images/ourKelvin.jpg"),
+  url: "Kelvin",
+  image: require("../images/ourKelvin.jpg"),
   firstname: "kelvin",
   fullname: "Kelvin Voke",
   textOne: `I got interested in computers because I was able in getting
@@ -180,7 +183,8 @@ const Kelvin = {
 };
 
 const Mary = {
-  image: require("./images/ourMary.jpg"),
+  url: "Mary",
+  image: require("../images/ourMary.jpg"),
   firstname: "mary",
   fullname: "Mary Achieng",
   textOne: `Computer is a device that makes work easier. I knew nothing
@@ -264,7 +268,8 @@ const Mary = {
 };
 
 const Onesmus = {
-  image: require("./images/ourOnesmus.jpg"),
+  url: "Onesmus",
+  image: require("../images/ourOnesmus.jpg"),
   firstname: "onesmus",
   fullname: "Onesmus Achieng",
   textOne: `I like computers simply because they give me world in my hands
@@ -306,7 +311,8 @@ const Onesmus = {
 };
 
 const Samuel = {
-  image: require("./images/ourSamuel.jpg"),
+  url: "Samuel",
+  image: require("../images/ourSamuel.jpg"),
   firstname: "samuel",
   fullname: "Samuel Achieng",
   textOne: `I like computers because they helped me expand my mind and I get
@@ -337,7 +343,8 @@ const Samuel = {
 };
 
 const Vivian = {
-  image: require("./images/ourVivian.jpg"),
+  url: "Vivian",
+  image: require("../images/ourVivian.jpg"),
   firstname: "vivian",
   fullname: "Vivian Achieng",
   textOne: `I like computers one because they make work more easier. It has
@@ -374,7 +381,8 @@ const Vivian = {
 };
 
 const Winnie = {
-  image: require("./images/ourWinnie.jpg"),
+  url: "Winnie",
+  image: require("../images/ourWinnie.jpg"),
   firstname: "winnie",
   fullname: "Winnie Achieng",
   textOne: `My interest in computers developed when I learnt that technology
@@ -470,7 +478,8 @@ const Winnie = {
 };
 
 const Yvonne = {
-  image: require("./images/ourYvonne.jpg"),
+  url: "Yvonne",
+  image: require("../images/ourYvonne.jpg"),
   firstname: "yvonne",
   fullname: "Yvonne Achieng",
   textOne: `My interest in computers is that,through computers have been made

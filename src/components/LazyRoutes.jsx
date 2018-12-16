@@ -15,3 +15,7 @@ export const Team = lazy(() =>
 export const VisitAfrica = lazy(() =>
   import(/* webpackChunkName: "VisitAfrica" */ "./views/VisitAfrica.jsx")
 );
+
+export const StudentPage = lazy(() =>
+  import(/* webpackChunkName: "StudentPage" */ "./views/StudentPage.jsx")
+);

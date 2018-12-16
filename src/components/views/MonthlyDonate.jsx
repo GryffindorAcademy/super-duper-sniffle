@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { CardElement, injectStripe } from "react-stripe-elements";
-import Footer from "../Footer.jsx";
+import Footer from "../Footer/Footer.jsx";
 import donate1 from "../../images/donateMonthly1.jpg";
 import donate2 from "../../images/donateMonthly2.jpg";
 import ScrollToTop from "../ScrollToTop.jsx";

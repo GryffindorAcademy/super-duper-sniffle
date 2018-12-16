@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../Header.jsx";
 import Meaning from "../Meaning.jsx";
 import Action from "../Action.jsx";
-import Footer from "../Footer.jsx";
+import Footer from "../Footer/Footer.jsx";
 import ScrollToTop from "../ScrollToTop.jsx";
 
 class Home extends Component {

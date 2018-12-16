@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Footer from "../Footer.jsx";
+import Footer from "../Footer/Footer.jsx";
 import Student from "../Student.jsx";
-import { studentMatrix } from "../../studentInfo";
+import { studentMatrix } from "../../data/studentInfo";
 import ScrollToTop from "../ScrollToTop.jsx";
 
 export default class MeetTheStudents extends Component {

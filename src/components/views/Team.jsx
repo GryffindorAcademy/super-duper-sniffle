@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Footer from "../Footer.jsx";
-import TeamMember from "../TeamMember.jsx";
+import Footer from "../Footer/Footer.jsx";
+import TeamMember from "../Team/TeamMember.jsx";
 import ScrollToTop from "../ScrollToTop.jsx";
-import { teamMatrix } from "../../teamInfo";
+import { teamMatrix } from "../../data/teamInfo";
 
 export default class Team extends Component {
   constructor() {

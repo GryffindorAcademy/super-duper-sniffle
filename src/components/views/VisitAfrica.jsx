@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Footer from "../Footer.jsx";
+import Footer from "../Footer/Footer.jsx";
 import visit from "../../images/visit.jpg";
 import visit1 from "../../images/visit1.jpg";
 import visit2 from "../../images/visit2.jpg";

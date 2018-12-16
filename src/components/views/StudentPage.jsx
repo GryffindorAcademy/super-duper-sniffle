@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "./Footer.jsx";
-import ScrollToTop from "./ScrollToTop.jsx";
+import Footer from "../Footer/Footer.jsx";
+import ScrollToTop from "../ScrollToTop.jsx";
 
 const StudentPage = props => {
   let { image, firstname, fullname, textOne, textTwo, story } = props;

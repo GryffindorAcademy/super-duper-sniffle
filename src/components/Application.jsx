@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom";
 import { StripeProvider } from "react-stripe-elements";
 import Navigation from "./NavigationBar.jsx";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
   faCheckSquare,
   faSearch,
@@ -11,30 +10,22 @@ import {
   faEnvelope,
   faPhoneSquare
 } from "@fortawesome/free-solid-svg-icons";
-import SettingUpStripe from "./SettingUpStripe.jsx";
-import SettingUpStripeMonthly from "./SettingUpStripeMonthly.jsx";
-import { Home, MeetTheStudents, Team, VisitAfrica } from "./LazyRoutes.jsx";
-import StudentPage from "./StudentPage.jsx";
-import studentAnswers from "../studentAnswers";
+import SettingUpStripe from "./Stripe/SettingUpStripe.jsx";
+import SettingUpStripeMonthly from "./Stripe/SettingUpStripeMonthly.jsx";
+import {
+  Home,
+  MeetTheStudents,
+  Team,
+  VisitAfrica,
+  StudentPage
+} from "./LazyRoutes.jsx";
+import studentAnswers from "../data/studentAnswers";
 
-library.add(fab, faCheckSquare, faSearch, faBars, faEnvelope, faPhoneSquare);
+library.add(faCheckSquare, faSearch, faBars, faEnvelope, faPhoneSquare);
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      studentNames: [
-        "Ann",
-        "Daniel",
-        "Kelvin",
-        "Mary",
-        "Onesmus",
-        "Samuel",
-        "Vivian",
-        "Winnie",
-        "Yvonne"
-      ]
-    };
   }
   render() {
     return (
@@ -69,11 +60,11 @@ class App extends Component {
               )}
             />
             <Route exact path="/Team" component={Team} />
-            {this.state.studentNames.map((name, i) => (
+            {studentAnswers.map(student => (
               <Route
                 exact
-                path={`/${name}`}
-                render={() => <StudentPage {...studentAnswers[i]} />}
+                path={`/${student.url}`}
+                render={() => <StudentPage {...student} />}
               />
             ))}
             <Route exact path="/VisitAfrica" component={VisitAfrica} />

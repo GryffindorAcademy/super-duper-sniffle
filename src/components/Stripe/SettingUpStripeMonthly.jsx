@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Elements } from "react-stripe-elements";
-import Donate from "./views/Donate.jsx";
+import MonthlyDonate from "../views/MonthlyDonate.jsx";
 
-class SettingUpStripe extends Component {
+class SettingUpStripeMonthly extends Component {
   constructor() {
     super();
   }
@@ -11,11 +11,11 @@ class SettingUpStripe extends Component {
     return (
       <div>
         <Elements>
-          <Donate history={this.props.history} />
+          <MonthlyDonate history={this.props.history} />
         </Elements>
       </div>
     );
   }
 }
 
-export default SettingUpStripe;
+export default SettingUpStripeMonthly;
