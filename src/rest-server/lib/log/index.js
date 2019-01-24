@@ -1,34 +1,34 @@
-const chalk = require("chalk");
+// const chalk = require("chalk");
 
-/**
- * Simple logging functions
- *
- * Used purely for development
- * In production, set environment variable DEBUG to FALSE
- */
+// /**
+//  * Simple logging functions
+//  *
+//  * Used purely for development
+//  * In production, set environment variable DEBUG to FALSE
+//  */
 
-const success = (...log) => {
-  if (process.env.DEBUG === "TRUE") {
-    console.log(chalk.default.white.bgCyan.bold(...log));
-  }
-};
+// const success = (...log) => {
+//   if (process.env.DEBUG === "TRUE") {
+//     console.log(chalk.default.white.bgCyan.bold(...log));
+//   }
+// };
 
-const warning = (...log) => {
-  if (process.env.DEBUG === "TRUE") {
-    console.log(chalk.default.white.bgYellow.bold(...log));
-  }
-};
+// const warning = (...log) => {
+//   if (process.env.DEBUG === "TRUE") {
+//     console.log(chalk.default.white.bgYellow.bold(...log));
+//   }
+// };
 
-const error = (...log) => {
-  if (process.env.DEBUG === "TRUE") {
-    console.error(chalk.default.white.bgMagenta.bold(...log));
-  }
-};
+// const error = (...log) => {
+//   if (process.env.DEBUG === "TRUE") {
+//     console.error(chalk.default.white.bgMagenta.bold(...log));
+//   }
+// };
 
-const log = (...log) => {
-  if (process.env.DEBUG === "TRUE") {
-    console.log(chalk.default.white.bgWhite.bold(...log));
-  }
-};
+// const log = (...log) => {
+//   if (process.env.DEBUG === "TRUE") {
+//     console.log(chalk.default.white.bgWhite.bold(...log));
+//   }
+// };
 
-module.exports = { success, warning, error, log };
+// module.exports = { success, warning, error, log };
