@@ -60,13 +60,13 @@ class App extends Component {
               )}
             />
             <Route exact path="/Team" component={Team} />
-            {studentAnswers.map(student => (
+            {/* {studentAnswers.map(student => (
               <Route
                 exact
                 path={`/${student.url}`}
                 render={() => <StudentPage {...student} />}
               />
-            ))}
+            ))} */}
             <Route exact path="/VisitAfrica" component={VisitAfrica} />
           </Suspense>
         </Switch>
