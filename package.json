@@ -6,7 +6,7 @@
   "scripts": {
     "build": "BABEL_ENV=production webpack --config=config/webpack.config.js --mode production --env.NODE_ENV=production",
     "build:dev": "webpack --config=config/webpack.config.js --mode development --env.NODE_ENV=development",
-    "dev": "node --inspect --watch src/rest-server --watch config src/rest-server/main.js",
+    "dev": "nodemon --inspect --watch src/rest-server --watch config src/rest-server/main.js",
     "prod": "NODE_ENV=production node src/rest-server/main.js"
   },
   "keywords": [],

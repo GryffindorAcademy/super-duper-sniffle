@@ -31,10 +31,10 @@ class Donate extends Component {
     const { name, value } = e.target;
     this.setState({
       amount: parseInt(value) * 100,
-      bgColor25: "#69C9CA",
-      bgColor50: "#69C9CA",
-      bgColor75: "#69C9CA",
-      bgColor100: "#69C9CA"
+      bgColor25: "#FFF",
+      bgColor50: "#FFF",
+      bgColor75: "#FFF",
+      bgColor100: "#FFF"
     });
   }
 
@@ -42,9 +42,9 @@ class Donate extends Component {
     this.setState({
       amount: 2500,
       bgColor25: "#8F67BD",
-      bgColor50: "#69C9CA",
-      bgColor75: "#69C9CA",
-      bgColor100: "#69C9CA"
+      bgColor50: "#FFF",
+      bgColor75: "#FFF",
+      bgColor100: "#FFF"
     });
   };
 
@@ -52,9 +52,9 @@ class Donate extends Component {
     this.setState({
       amount: 5000,
       bgColor50: "#8F67BD",
-      bgColor25: "#69C9CA",
-      bgColor75: "#69C9CA",
-      bgColor100: "#69C9CA"
+      bgColor25: "#FFF",
+      bgColor75: "#FFF",
+      bgColor100: "#FFF"
     });
   };
 
@@ -62,9 +62,9 @@ class Donate extends Component {
     this.setState({
       amount: 7500,
       bgColor75: "#8F67BD",
-      bgColor25: "#69C9CA",
-      bgColor50: "#69C9CA",
-      bgColor100: "#69C9CA"
+      bgColor25: "#FFF",
+      bgColor50: "#FFF",
+      bgColor100: "#FFF"
     });
   };
 
@@ -72,9 +72,9 @@ class Donate extends Component {
     this.setState({
       amount: 10000,
       bgColor100: "#8F67BD",
-      bgColor25: "#69C9CA",
-      bgColor50: "#69C9CA",
-      bgColor75: "#69C9CA"
+      bgColor25: "#FFF",
+      bgColor50: "#FFF",
+      bgColor75: "#FFF"
     });
   };
 
@@ -186,28 +186,52 @@ class Donate extends Component {
                     <div
                       className="donationForm__amounts--btn"
                       onClick={this.handleTwentyfive.bind(this)}
-                      style={{ backgroundColor: this.state.bgColor25 }}
+                      style={{
+                        backgroundColor: this.state.bgColor25,
+                        color:
+                          this.state.bgColor25 === "#8F67BD"
+                            ? "#FFF"
+                            : "#8F67BD"
+                      }}
                     >
                       $25
                     </div>
                     <div
                       className="donationForm__amounts--btn"
                       onClick={this.handleFifty.bind(this)}
-                      style={{ backgroundColor: this.state.bgColor50 }}
+                      style={{
+                        backgroundColor: this.state.bgColor50,
+                        color:
+                          this.state.bgColor50 === "#8F67BD"
+                            ? "#FFF"
+                            : "#8F67BD"
+                      }}
                     >
                       $50
                     </div>
                     <div
                       className="donationForm__amounts--btn"
                       onClick={this.handleSeventyfive.bind(this)}
-                      style={{ backgroundColor: this.state.bgColor75 }}
+                      style={{
+                        backgroundColor: this.state.bgColor75,
+                        color:
+                          this.state.bgColor75 === "#8F67BD"
+                            ? "#FFF"
+                            : "#8F67BD"
+                      }}
                     >
                       $75
                     </div>
                     <div
                       className="donationForm__amounts--btn"
                       onClick={this.handleHundred.bind(this)}
-                      style={{ backgroundColor: this.state.bgColor100 }}
+                      style={{
+                        backgroundColor: this.state.bgColor100,
+                        color:
+                          this.state.bgColor100 === "#8F67BD"
+                            ? "#FFF"
+                            : "#8F67BD"
+                      }}
                     >
                       $100
                     </div>
