@@ -1,7 +1,7 @@
 const { stripe } = require("../config/stripe");
 // const { success, error } = require("../lib/log");
 const { Joi, schema } = require("../lib/middleware/request-validation.js");
-// const client = require("../config/postgres/index.js");
+const client = require("../config/postgres/index.js");
 
 const monthlyDonation = {
   post: async (req, res) => {
