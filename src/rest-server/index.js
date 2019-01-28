@@ -1,7 +1,6 @@
 const http = require("http");
 const app = require("./config/express");
 const PORT = process.env.PORT || 6060;
-// const { success, error } = require("./lib/log");
 
 const server = http.createServer(app);
 

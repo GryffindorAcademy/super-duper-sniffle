@@ -33,6 +33,7 @@ class App extends Component {
             {this.state.donateRoutes.map(route => (
               <Route
                 exact
+                key={route}
                 path={route}
                 component={props => (
                   <StripeProvider
