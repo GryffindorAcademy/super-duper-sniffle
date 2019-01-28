@@ -49,7 +49,7 @@ class Donate extends Component {
     });
   };
 
-  handleFifty = e => {
+  handleFifty = () => {
     this.setState({
       amount: 5000,
       bgColor50: "#8F67BD",
@@ -134,11 +134,11 @@ class Donate extends Component {
 
   render() {
     return (
-      <div>
+      <main>
         <ScrollToTop />
         <section id="section-donation">
           <div className="donateBackground">
-            <div className="donateBackground__heading">
+            <header className="donateBackground__heading">
               <div className="donateHeaderContainer">
                 <div className="primaryHeading">
                   Thank you for your donation
@@ -147,7 +147,7 @@ class Donate extends Component {
                   100% of your money empowers students through education
                 </div>
               </div>
-            </div>
+            </header>
             <div className="row">
               <div className="col-1-of-2">
                 <div className="donationForm">
@@ -179,10 +179,10 @@ class Donate extends Component {
                       />
                     </form>
                   </div>
-                  <div className="donationForm__formLabel">
+                  <label className="donationForm__formLabel">
                     Payment Information
-                  </div>
-                  <div className="donationForm__donation">
+                  </label>
+                  <section className="donationForm__donation">
                     <div className="donationForm__amounts">
                       <label className="amount__container--donationLabel">
                         Select amount
@@ -276,12 +276,12 @@ class Donate extends Component {
                         base: { fontSize: "15px", fontFamily: "Ubuntu" }
                       }}
                     />
-                  </div>
-                  <div className="donationForm__formLabel">
+                  </section>
+                  <label className="donationForm__formLabel">
                     By clicking, you agree to <a href="#terms">our terms</a> and
                     conditions.
-                  </div>
-                  <div id="terms" className="termsandconditions">
+                  </label>
+                  <section id="terms" className="termsandconditions">
                     <div className="termsandconditions__content">
                       <div className="termsandconditions__right">
                         <a
@@ -297,7 +297,7 @@ class Donate extends Component {
                         501(c)(3) charitable status is in process.”
                       </div>
                     </div>
-                  </div>
+                  </section>
                   <div
                     className="donationForm__button"
                     onClick={this.submit.bind(this)}
@@ -322,7 +322,7 @@ class Donate extends Component {
           </div>
         </section>
         <Footer />
-      </div>
+      </main>
     );
   }
 }

@@ -133,7 +133,7 @@ class Donate extends Component {
 
   render() {
     return (
-      <div>
+      <main>
         <ScrollToTop />
         <div className="donateBackground">
           <div className="donateBackground__heading">
@@ -147,9 +147,9 @@ class Donate extends Component {
           <div className="row">
             <div className="col-1-of-2">
               <div className="donationForm">
-                <div className="donationForm__formLabel">
+                <label className="donationForm__formLabel">
                   Personal Information
-                </div>
+                </label>
                 <div className="donationForm__information">
                   <form>
                     <input
@@ -175,10 +175,10 @@ class Donate extends Component {
                     />
                   </form>
                 </div>
-                <div className="donationForm__formLabel">
+                <label className="donationForm__formLabel">
                   Payment Information
-                </div>
-                <div className="donationForm__donation">
+                </label>
+                <section className="donationForm__donation">
                   <div className="donationForm__amounts">
                     <label className="amount__container--donationLabel">
                       Select amount
@@ -270,7 +270,7 @@ class Donate extends Component {
                       base: { fontSize: "15px", fontFamily: "Ubuntu" }
                     }}
                   />
-                </div>
+                </section>
                 <div
                   className="donationForm__button"
                   onClick={this.submit.bind(this)}
@@ -290,7 +290,7 @@ class Donate extends Component {
           </div>
         </div>
         <Footer />
-      </div>
+      </main>
     );
   }
 }
