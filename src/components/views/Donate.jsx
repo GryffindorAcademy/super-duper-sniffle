@@ -3,6 +3,7 @@ import { CardElement, injectStripe } from "react-stripe-elements";
 import Footer from "../Footer/Footer.jsx";
 import donate from "../../images/donate.jpg";
 import ScrollToTop from "../ScrollToTop.jsx";
+import Amounts from "../Donate/Amounts.jsx";
 
 class Donate extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class Donate extends Component {
       bgColor100: "none",
       frequency: "monthly"
     };
+    this.handleSelection = this.handleSelection.bind(this);
   }
 
   handleState = e => {
@@ -38,44 +40,16 @@ class Donate extends Component {
     });
   }
 
-  handleTwentyfive = () => {
-    this.setState({
-      amount: 2500,
-      bgColor25: "#8F67BD",
+  handleSelection = (key, value) => {
+    let state = {
+      amount: value,
+      bgColor25: "#FFF",
       bgColor50: "#FFF",
       bgColor75: "#FFF",
       bgColor100: "#FFF"
-    });
-  };
-
-  handleFifty = e => {
-    this.setState({
-      amount: 5000,
-      bgColor50: "#8F67BD",
-      bgColor25: "#FFF",
-      bgColor75: "#FFF",
-      bgColor100: "#FFF"
-    });
-  };
-
-  handleSeventyfive = () => {
-    this.setState({
-      amount: 7500,
-      bgColor75: "#8F67BD",
-      bgColor25: "#FFF",
-      bgColor50: "#FFF",
-      bgColor100: "#FFF"
-    });
-  };
-
-  handleHundred = () => {
-    this.setState({
-      amount: 10000,
-      bgColor100: "#8F67BD",
-      bgColor25: "#FFF",
-      bgColor50: "#FFF",
-      bgColor75: "#FFF"
-    });
+    };
+    state[key] = "#8F67BD";
+    this.setState(state);
   };
 
   toggleToMonthly = async () => {
@@ -136,14 +110,14 @@ class Donate extends Component {
       <main>
         <ScrollToTop />
         <div className="donateBackground">
-          <div className="donateBackground__heading">
+          <header className="donateBackground__heading">
             <div className="donateHeaderContainer">
               <div className="primaryHeading">Thank you for your donation</div>
               <div className="secondaryHeading">
                 100% of your money empowers students through education
               </div>
             </div>
-          </div>
+          </header>
           <div className="row">
             <div className="col-1-of-2">
               <div className="donationForm">
@@ -183,58 +157,10 @@ class Donate extends Component {
                     <label className="amount__container--donationLabel">
                       Select amount
                     </label>
-                    <div
-                      className="donationForm__amounts--btn"
-                      onClick={this.handleTwentyfive.bind(this)}
-                      style={{
-                        backgroundColor: this.state.bgColor25,
-                        color:
-                          this.state.bgColor25 === "#8F67BD"
-                            ? "#FFF"
-                            : "#8F67BD"
-                      }}
-                    >
-                      $25
-                    </div>
-                    <div
-                      className="donationForm__amounts--btn"
-                      onClick={this.handleFifty.bind(this)}
-                      style={{
-                        backgroundColor: this.state.bgColor50,
-                        color:
-                          this.state.bgColor50 === "#8F67BD"
-                            ? "#FFF"
-                            : "#8F67BD"
-                      }}
-                    >
-                      $50
-                    </div>
-                    <div
-                      className="donationForm__amounts--btn"
-                      onClick={this.handleSeventyfive.bind(this)}
-                      style={{
-                        backgroundColor: this.state.bgColor75,
-                        color:
-                          this.state.bgColor75 === "#8F67BD"
-                            ? "#FFF"
-                            : "#8F67BD"
-                      }}
-                    >
-                      $75
-                    </div>
-                    <div
-                      className="donationForm__amounts--btn"
-                      onClick={this.handleHundred.bind(this)}
-                      style={{
-                        backgroundColor: this.state.bgColor100,
-                        color:
-                          this.state.bgColor100 === "#8F67BD"
-                            ? "#FFF"
-                            : "#8F67BD"
-                      }}
-                    >
-                      $100
-                    </div>
+                    <Amounts
+                      handleSelection={this.handleSelection}
+                      state={this.state}
+                    />
                     <div className="amount">
                       <form>
                         <label className="amount__container--donationLabel">
@@ -281,10 +207,12 @@ class Donate extends Component {
             </div>
             <div className="col-1-of-2">
               <div className="composition">
+                {/* Difference */}
                 <img
                   className="composition__photo composition__photo--p2"
                   src={donate}
                 />
+                {/* /Difference */}
               </div>
             </div>
           </div>

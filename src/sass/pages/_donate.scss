@@ -1,9 +1,12 @@
 .donateBackground {
   background-color: $blue;
-  padding-bottom: 1rem;
+  // padding-bottom: 1rem;
 
   &__heading {
     text-align: center;
+    padding-top: 12rem;
+    color: $color-purple;
+    padding-bottom: 4rem;
   }
 }
 .amount {
@@ -48,11 +51,11 @@
 
 // One time donation
 
-.donateHeaderContainer {
-  padding-top: 12rem;
-  color: $color-purple;
-  padding-bottom: 4rem;
-}
+// .donateHeaderContainer {
+//   padding-top: 12rem;
+//   color: $color-purple;
+//   padding-bottom: 4rem;
+// }
 
 .donationForm {
   border: solid $purple thin;
