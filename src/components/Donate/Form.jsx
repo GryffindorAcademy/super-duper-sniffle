@@ -11,7 +11,6 @@ class Form extends Component {
       lastname: "",
       email: "",
       amount: "",
-      frequency: "",
       amount: "",
       bgColor25: "none",
       bgColor50: "none",
@@ -60,7 +59,7 @@ class Form extends Component {
   };
 
   toggleToMonthly = async () => {
-    const { frequency } = this.state;
+    let { frequency } = this.state;
     if (frequency === "monthly") {
       this.setState({ frequency: "one time" });
     } else {
