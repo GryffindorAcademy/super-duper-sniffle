@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+/////////////////////////////////
+// Rendered upon the Home page //
+/////////////////////////////////
+import React, { Component } from "react";
 
 export default class Action extends Component {
   constructor(props) {
@@ -6,17 +9,29 @@ export default class Action extends Component {
   }
 
   handleDonation() {
-    this.props.history.push('/Donate');
+    this.props.history.push("/Donate");
   }
 
   render() {
     return (
-      <div className="section-action__content">
-        <div className="primaryHeading">Leveling the educational playing field</div>
-        <div className="secondaryHeading">Education has the power to democratize opportunity.</div>
-        <div className="secondaryHeading">Education improves community health and reduces needless human suffering</div>
-        <div className="section-action__content--btn" onClick={this.handleDonation.bind(this)}>Give Education</div>
-      </div>
-    )
+      <section className="section-action__content">
+        <h3 className="primaryHeading">
+          Leveling the educational playing field
+        </h3>
+        <h3 className="secondaryHeading">
+          Education has the power to democratize opportunity.
+        </h3>
+        <h3 className="secondaryHeading">
+          Education improves community health and reduces needless human
+          suffering
+        </h3>
+        <button
+          className="section-action__content--btn"
+          onClick={this.handleDonation.bind(this)}
+        >
+          Give Education
+        </button>
+      </section>
+    );
   }
 }

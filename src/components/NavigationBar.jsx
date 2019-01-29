@@ -1,3 +1,6 @@
+//////////////////////////////////////////////////////////////////////////////
+// Navbar used across site, mobile and site Nav will render upon page width //
+//////////////////////////////////////////////////////////////////////////////
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
@@ -9,7 +12,6 @@ const MobileNav = () => (
     </a>
     <div className="dropdownContent">
       <Link to="/MonthlyDonate">Give monthly</Link>
-      {/* <Link to='/MeetTheStudents'>Our students</Link> */}
       <Link to="/Team">Team</Link>
       <Link to="/VisitAfrica">Visit Africa</Link>
       <Link to="/Donate">Donate</Link>

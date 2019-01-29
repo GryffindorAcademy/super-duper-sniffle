@@ -1,3 +1,6 @@
+///////////////////////////////////////////////
+// Team page, all team memebers display here //
+///////////////////////////////////////////////
 import React, { Component } from "react";
 import Footer from "../Footer/Footer.jsx";
 import TeamMember from "../Team/TeamMember.jsx";
@@ -31,17 +34,17 @@ export default class Team extends Component {
         <header>
           <div className="team" />
           <div className="teamQuote">
-            <div className="primaryHeading">
+            <h3 className="primaryHeading">
               We believe everyone deserves a chance to learn
-            </div>
+            </h3>
           </div>
         </header>
         <section id="section-team">
           <div className="teamHeading">
-            <div className="primaryHeading">Team</div>
+            <h3 className="primaryHeading">Team</h3>
           </div>
           {teamMatrix.map(row => (
-            <div className="row">
+            <section className="row">
               {row.map(col => (
                 <TeamMember
                   image={col.image}
@@ -51,7 +54,7 @@ export default class Team extends Component {
                   bio={col.bio}
                 />
               ))}
-            </div>
+            </section>
           ))}
         </section>
         <Footer />

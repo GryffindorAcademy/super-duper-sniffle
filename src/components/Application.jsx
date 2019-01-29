@@ -1,3 +1,6 @@
+//////////////////////////////////////////////////////////////////////
+// Top level of App, Routes controller from here, using Lazy Routes //
+//////////////////////////////////////////////////////////////////////
 import React, { Suspense, Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import { StripeProvider } from "react-stripe-elements";

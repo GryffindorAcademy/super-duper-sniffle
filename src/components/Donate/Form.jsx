@@ -1,3 +1,6 @@
+/////////////////////////////////////////////////////////////////////
+// Form component rendered within Donate view, collects user input //
+/////////////////////////////////////////////////////////////////////
 import React, { Component } from "react";
 import { CardElement, injectStripe } from "react-stripe-elements";
 import Amounts from "./Amounts.jsx";
@@ -58,7 +61,7 @@ class Form extends Component {
     this.setState(state);
   };
 
-  toggleToMonthly = async () => {
+  toggleToMonthly = () => {
     let { frequency } = this.state;
     if (frequency === "monthly") {
       this.setState({ frequency: "one time" });

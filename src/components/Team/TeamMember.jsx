@@ -1,9 +1,12 @@
+////////////////////////////////////////////////////////////////
+// Element which holds teach team memebrs info upon team Page //
+////////////////////////////////////////////////////////////////
 import React from "react";
 
 const TeamMember = props => {
   let { image, firstname, fullname, role, bio } = props;
   return (
-    <div key={fullname} className="col-1-of-3">
+    <section key={fullname} className="col-1-of-3">
       <div className="member">
         <div className="member__picture">
           <img className="member__picture--img" src={image} />
@@ -37,7 +40,7 @@ const TeamMember = props => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

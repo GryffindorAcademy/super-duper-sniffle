@@ -1,3 +1,7 @@
+////////////////////////////////////////////////////////////////////////////////
+// Amounts component rendered within Donate page, contains amounts to select, //
+// seperated for readability                                                  //
+////////////////////////////////////////////////////////////////////////////////
 import React, { Component, Fragment } from "react";
 
 class Amounts extends Component {

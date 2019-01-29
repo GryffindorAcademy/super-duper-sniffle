@@ -8,15 +8,6 @@ import ScrollToTop from "../ScrollToTop.jsx";
 class Home extends Component {
   constructor() {
     super();
-    this.state = {};
-  }
-
-  handleMenuBtn() {
-    this.setState({});
-  }
-
-  handleTeam() {
-    this.props.history.push("/Team");
   }
 
   render() {

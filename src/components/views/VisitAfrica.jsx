@@ -1,3 +1,6 @@
+//////////////////////////////////////////////////////////////////////
+// Visit Africa page, links go to Mail Chimp - Mail Chimp MUST WORK //
+//////////////////////////////////////////////////////////////////////
 import React, { Component } from "react";
 import Footer from "../Footer/Footer.jsx";
 import visit from "../../images/visit.jpg";
@@ -78,19 +81,20 @@ export default class VisitAfrica extends Component {
 
   render() {
     return (
-      <div>
+      <main>
         <ScrollToTop />
-        <div className="visitHeader">
+        <section className="visitHeader">
           <div className="visitBanner">
-            <div className="primaryHeading">An inspiration vacation</div>
-            <div className="secondaryHeading">
+            <h3 className="primaryHeading">An inspiration vacation</h3>
+            <h3 className="secondaryHeading">
               Book a life changing visit to the children at Jijenge @ Nairobi.
-            </div>
-            <div className="secondaryHeading">
+            </h3>
+            <h3 className="secondaryHeading">
               Meet the children yourself while experiencing the world's best
               Safari tours and beach vacations!
-            </div>
+            </h3>
             <div className="visitBanner__container">
+              {/* THIS LINK GOES TO MAIL CHIMP, MAIL CHIMP MUST FUNCTION */}
               <a
                 href="http://eepurl.com/dH3L6b"
                 className="visitBanner__container--btn"
@@ -99,12 +103,12 @@ export default class VisitAfrica extends Component {
               </a>
             </div>
           </div>
-        </div>
+        </section>
         <section className="section-slides">
           <div className="section-slides__heading">
-            <div className="primaryHeading">Meet the children</div>
+            <h3 className="primaryHeading">Meet the children</h3>
           </div>
-          <div className="slideshow-container">
+          <section className="slideshow-container">
             <div className="mySlides fade">
               <img
                 className="image"
@@ -117,14 +121,14 @@ export default class VisitAfrica extends Component {
             <div className="next" onClick={this.handleNextMeetArrow.bind(this)}>
               &#10095;
             </div>
-          </div>
+          </section>
         </section>
 
         <section className="section-slides">
           <div className="section-slides__heading">
-            <div className="primaryHeading">Experience Africa</div>
+            <h3 className="primaryHeading">Experience Africa</h3>
           </div>
-          <div className="slideshow-container">
+          <section className="slideshow-container">
             <div className="mySlides fade">
               <img
                 className="image"
@@ -143,16 +147,17 @@ export default class VisitAfrica extends Component {
             >
               &#10095;
             </div>
-          </div>
+          </section>
         </section>
         <section className="section-experience">
           <div className="section-experience__heading">
-            <div className="primaryHeading">
+            <h3 className="primaryHeading">
               Experience the trip of a lifetime
-            </div>
+            </h3>
           </div>
-          <div className="section-experience__container">
+          <section className="section-experience__container">
             <div className="section-experience__container--form">
+              {/* THIS LINK GOES TO MAIL CHIMP, MAIL CHIMP MUST FUNCTION */}
               <a
                 className="section-experience__container--btn"
                 href="http://eepurl.com/dH3L6b"
@@ -160,10 +165,10 @@ export default class VisitAfrica extends Component {
                 Tailor a trip to Kenya
               </a>
             </div>
-          </div>
+          </section>
         </section>
         <Footer />
-      </div>
+      </main>
     );
   }
 }

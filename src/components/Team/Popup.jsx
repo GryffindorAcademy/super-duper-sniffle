@@ -1,3 +1,6 @@
+////////////////////////////////////////////////////////////////
+// Popcup used on Team page for member information to display //
+////////////////////////////////////////////////////////////////
 import React, { Component } from "react";
 
 export default class Popup extends Component {
@@ -8,13 +11,13 @@ export default class Popup extends Component {
   render() {
     const { close } = this.props;
     return (
-      <div className="popup">
+      <section className="popup">
         <div className="popup__content">
           <div onClick={close()}>X</div>
           <div className="popup__content--header" />
           <div className="popup__content--bio" />
         </div>
-      </div>
+      </section>
     );
   }
 }

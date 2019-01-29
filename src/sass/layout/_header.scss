@@ -1,7 +1,7 @@
 .header {
   height: 100vh;
 
-  &__video {
+  &__background {
     height: 100vh;
     background-image: url(./images/home.jpg);
     background-size: cover;
@@ -11,7 +11,7 @@
   &__heading {
     position: absolute;
     top: 15%;
-    left: 30%; // 28%
+    left: 30%;
     text-align: center;
     color: $color-blue;
     text-shadow: 1px 1px 1px $color-black;
@@ -60,7 +60,7 @@
     color: $color-white;
     background-color: $color-purple;
     width: 100%;
-    & div:first-of-type {
+    h3:first-of-type {
       margin-bottom: 2rem;
       margin-top: 3.5rem;
     }
@@ -78,8 +78,3 @@
     }
   }
 }
-
-// video::-webkit-media-controls-panel {
-//   display: flex !important;
-//   opacity: 1 !important;
-// }
