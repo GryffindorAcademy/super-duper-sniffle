@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Header from "../Header.jsx";
-import Meaning from "../Meaning.jsx";
-import Action from "../Action.jsx";
+import Header from "../Home/Header.jsx";
+import Meaning from "../Home/Meaning.jsx";
+import Action from "../Home/Action.jsx";
 import Footer from "../Footer/Footer.jsx";
 import ScrollToTop from "../ScrollToTop.jsx";
 
@@ -12,7 +12,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
+      <main>
         <ScrollToTop />
         <Header history={this.props.history} />
         <main>
@@ -24,7 +24,7 @@ class Home extends Component {
           </section>
         </main>
         <Footer />
-      </div>
+      </main>
     );
   }
 }
