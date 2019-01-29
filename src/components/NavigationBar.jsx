@@ -21,17 +21,6 @@ const MobileNav = () => (
 const WebNav = () => (
   <div className="navigation__list">
     <div className="navigation__item">
-      <Link className="navigation__link" to="/MonthlyDonate">
-        Give monthly
-      </Link>
-    </div>
-    {/* Turn off Students when done */}
-    {/* <div className="navigation__item">
-      <Link className="navigation__link" to="/MeetTheStudents">
-        Our students
-      </Link>
-    </div> */}
-    <div className="navigation__item">
       <Link className="navigation__link" to="/Team">
         Team
       </Link>

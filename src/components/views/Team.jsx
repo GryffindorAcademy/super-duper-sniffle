@@ -22,12 +22,11 @@ export default class Team extends Component {
     this.setState({
       popup: "close"
     });
-    console.log("hello");
   };
 
   render() {
     return (
-      <div>
+      <main>
         <ScrollToTop />
         <header>
           <div className="team" />
@@ -56,7 +55,7 @@ export default class Team extends Component {
           ))}
         </section>
         <Footer />
-      </div>
+      </main>
     );
   }
 }
