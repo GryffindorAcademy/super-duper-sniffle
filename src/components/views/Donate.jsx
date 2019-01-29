@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Footer from "../Footer/Footer.jsx";
-import donate from "../../images/donate.jpg";
+// import donate from "../../images/donate.jpg";
 import donate1 from "../../images/donateMonthly1.jpg";
 import donate2 from "../../images/donateMonthly2.jpg";
 import ScrollToTop from "../ScrollToTop.jsx";
@@ -26,23 +26,14 @@ class Donate extends Component {
             <Form history={this.props.history} />
           </div>
           <div className="col-1-of-2 composition">
-            {this.props.history.location.pathname === "/MonthlyDonate" ? (
-              <Fragment>
-                <img
-                  className="composition__photo composition__photo--p1"
-                  src={donate1}
-                />
-                <img
-                  className="composition__photo composition__photo--p2"
-                  src={donate2}
-                />
-              </Fragment>
-            ) : (
-              <img
-                className="composition__photo composition__photo--p2"
-                src={donate}
-              />
-            )}
+            <img
+              className="composition__photo composition__photo--p1"
+              src={donate1}
+            />
+            <img
+              className="composition__photo composition__photo--p2"
+              src={donate2}
+            />
           </div>
         </section>
         <Footer />
@@ -52,3 +43,10 @@ class Donate extends Component {
 }
 
 export default Donate;
+
+{
+  /* <img
+  className="composition__photo composition__photo--p2"
+  src={donate}
+/> */
+}

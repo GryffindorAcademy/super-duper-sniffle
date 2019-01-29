@@ -31,12 +31,12 @@ class Form extends Component {
   }
 
   handleState = e => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
     this.setState({ [name]: value });
   };
 
   handleAmount = e => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
     this.setState({
       amount: parseInt(value) * 100,
       bgColor25: "#FFF",
@@ -148,10 +148,10 @@ class Form extends Component {
                 <label className="amount__container--label">USD</label>
               </div>
               <div className="question">
-                <div className="switch">
+                <label className="switch">
                   <input type="checkbox" onClick={this.toggleToMonthly} />
                   <span className="slider round" />
-                </div>
+                </label>
                 <label className="question__container">Donate monthly</label>
               </div>
             </form>
