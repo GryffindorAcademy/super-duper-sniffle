@@ -3,11 +3,11 @@
 //////////////////////////////////////////////////////////////////////////
 import React, { Component } from "react";
 import Footer from "../Footer/Footer.jsx";
-// import donate from "../../images/donate.jpg";
+import { StripeProvider } from "react-stripe-elements";
+import SettingUpStripe from "../Stripe/SettingUpStripe.jsx";
 import donate1 from "../../images/donateMonthly1.jpg";
 import donate2 from "../../images/donateMonthly2.jpg";
 import ScrollToTop from "../ScrollToTop.jsx";
-import Form from "../Donate/Form.jsx";
 
 class Donate extends Component {
   constructor(props) {
@@ -26,7 +26,12 @@ class Donate extends Component {
         </header>
         <section className="row">
           <div className="col-1-of-2">
-            <Form history={this.props.history} />
+            <StripeProvider
+              stripe={this.props.stripe}
+              apiKey="pk_live_vszrvMhRROMcdoTW3BXBy3MQ"
+            >
+              <SettingUpStripe {...this.props} />
+            </StripeProvider>
           </div>
           <div className="col-1-of-2 composition">
             <img
@@ -46,10 +51,3 @@ class Donate extends Component {
 }
 
 export default Donate;
-
-{
-  /* <img
-  className="composition__photo composition__photo--p2"
-  src={donate}
-/> */
-}

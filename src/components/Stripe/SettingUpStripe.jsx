@@ -3,17 +3,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 import React, { Component } from "react";
 import { Elements } from "react-stripe-elements";
-import Donate from "../views/Donate.jsx";
+import Form from "../Donate/Form.jsx";
 
 class SettingUpStripe extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
       <Elements>
-        <Donate history={this.props.history} />
+        <Form history={this.props.history} />
       </Elements>
     );
   }

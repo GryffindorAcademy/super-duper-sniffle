@@ -14,3 +14,7 @@ export const Team = lazy(() =>
 export const VisitAfrica = lazy(() =>
   import(/* webpackChunkName: "VisitAfrica" */ "./views/VisitAfrica.jsx")
 );
+
+export const Donate = lazy(() =>
+  import(/* webpackChunkName: "Donate" */ "./views/Donate.jsx")
+);

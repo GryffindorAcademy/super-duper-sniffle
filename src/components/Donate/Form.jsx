@@ -21,7 +21,7 @@ class Form extends Component {
       bgColor100: "none",
       frequency: "monthly",
       inputs: [
-        ["First name", "firstname"],
+        ["First name", "name"],
         ["Last name", "lastname"],
         ["Email", "email"]
       ]

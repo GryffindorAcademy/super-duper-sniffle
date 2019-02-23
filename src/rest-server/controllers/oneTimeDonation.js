@@ -30,7 +30,7 @@ const oneTimeDonation = {
         res.status(409).end();
       }
     } catch (err) {
-      error("Error from payment controller: ", err);
+      console.log("Error from payment controller: ", err);
       res.status(500).end();
     }
   }

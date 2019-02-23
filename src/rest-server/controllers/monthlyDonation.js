@@ -18,7 +18,6 @@ const monthlyDonation = {
       }
     );
     try {
-      // Define a Product or add to an existing one
       if (validation) {
         if (amount === 2500) {
           const customer = await stripe.customers.create({
@@ -82,7 +81,7 @@ const monthlyDonation = {
         res.status(409).end();
       }
     } catch (err) {
-      error("Error from payment controller: ", err);
+      console.log("Error from payment controller: ", err);
       res.status(500).end();
     }
   }
