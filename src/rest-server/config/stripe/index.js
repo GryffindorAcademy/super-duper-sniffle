@@ -1,2 +1,2 @@
-const stripe = require("stripe")("secret_key");
+const stripe = require("stripe")("sk_live_0SHGDtMRwqI5WsbiOJtMBZ35");
 module.exports = { stripe };
