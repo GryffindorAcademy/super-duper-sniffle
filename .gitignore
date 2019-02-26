@@ -61,3 +61,6 @@ typings/
 
 # next.js build output
 .next
+
+# secret key for stripe server
+src/rest-server/config/stripe/index.js
