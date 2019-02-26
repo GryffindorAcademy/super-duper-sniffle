@@ -1,9 +1,15 @@
+///////////////////////////////////////
+// Controller for one time donations //
+///////////////////////////////////////
 const { stripe } = require("../config/stripe");
 const { Joi, schema } = require("../lib/middleware/request-validation.js");
 
 const oneTimeDonation = {
   post: async (req, res) => {
     const { name, lastname, email, token, amount } = JSON.parse(req.body);
+    ///////////////////////////////////////////////////////
+    // Joi validates to ensure all data has been entered //
+    ///////////////////////////////////////////////////////
     const validation = Joi.validate(
       { name: `${name}`, lastname: `${lastname}`, email: `${email}` },
       schema,
