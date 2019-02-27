@@ -9,7 +9,7 @@ const db = require("./index");
 const createMonthlyDonors = async () => {
   try {
     await db.query(
-      "CREATE TABLE IF NOT EXISTS monthlyDonors(id SERIAL PRIMARY KEY, name varchar (50),lastname varchar (50),customerid varchar (50),email varchar (50) UNIQUE)",
+      "CREATE TABLE IF NOT EXISTS monthlydonors(id SERIAL PRIMARY KEY, name varchar (50),last_name varchar (50),customerid varchar (50),email varchar (50) UNIQUE)",
       (err, res) => {
         if (err) {
           console.log("Error inside createMonthlyDonors query", err);
@@ -28,7 +28,7 @@ const createMonthlyDonors = async () => {
 /////////////////////////////////////
 const dropMonthlyDonors = async () => {
   try {
-    await db.query("DROP TABLE IF EXISTS monthlyDonors", (err, res) => {
+    await db.query("DROP TABLE IF EXISTS monthlydonors", (err, res) => {
       if (err) {
         console.log("Error inside dropMonthlyDonors query", err);
       } else {
@@ -46,7 +46,7 @@ const dropMonthlyDonors = async () => {
 const addMonthlyDonor = async valuesArray => {
   try {
     await db.query(
-      "INSERT INTO monthlyDonors(name, lastname, customerid, email) VALUES($1, $2, $3, $4)",
+      "INSERT INTO monthlyDonors(name, last_name, customerid, email) VALUES($1, $2, $3, $4)",
       valuesArray,
       (err, res) => {
         if (err) {

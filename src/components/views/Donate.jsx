@@ -4,7 +4,7 @@
 import React, { Component } from "react";
 import Footer from "../Footer/Footer.jsx";
 import { StripeProvider } from "react-stripe-elements";
-import { stripeKey, testStripeKey } from "../../data/publicStripeKey";
+import { stripeKey } from "../../data/stripeKeys";
 import SettingUpStripe from "../Stripe/SettingUpStripe.jsx";
 import donate1 from "../../images/donateMonthly1.jpg";
 import donate2 from "../../images/donateMonthly2.jpg";
@@ -27,7 +27,7 @@ class Donate extends Component {
         </header>
         <section className="row">
           <div className="col-1-of-2">
-            <StripeProvider stripe={this.props.stripe} apiKey={testStripeKey}>
+            <StripeProvider stripe={this.props.stripe} apiKey={stripeKey}>
               <SettingUpStripe {...this.props} />
             </StripeProvider>
           </div>

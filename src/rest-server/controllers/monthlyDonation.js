@@ -3,7 +3,7 @@
 //////////////////////////////////////
 const { stripe } = require("../config/stripe");
 const { Joi, schema } = require("../lib/middleware/request-validation.js");
-const { addMonthlyDonor } = require("../config/postgres/config");
+// const { addMonthlyDonor } = require("../config/postgres/config");
 
 const monthlyDonation = {
   post: async (req, res) => {
@@ -25,6 +25,7 @@ const monthlyDonation = {
     );
     try {
       if (validation) {
+        console.log("MONTHLY DID FIRE - SERVER");
         let customer = null;
         if (amount === 2500) {
           ////////////////////////////////////
@@ -93,7 +94,7 @@ const monthlyDonation = {
             email: email,
             source: token
           });
-          const subscription = await stripe.subscriptions.create({
+          const subscription = await testStripeKey.subscriptions.create({
             customer: customer.id,
             items: [{ plan: varPlan.id }]
           });
@@ -101,7 +102,7 @@ const monthlyDonation = {
         ///////////////////////////////////////////////////////////
         // Call upon the query to insert customer info into PSQL //
         ///////////////////////////////////////////////////////////
-        await addMonthlyDonor([name, lastname, customer.id, email]);
+        // await addMonthlyDonor([name, lastname, customer.id, email]);
         res.status(200).end();
       } else {
         res.status(409).end();
