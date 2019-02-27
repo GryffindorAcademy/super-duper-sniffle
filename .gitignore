@@ -63,4 +63,4 @@ typings/
 .next
 
 # secret key for stripe server
-# src/rest-server/config/stripe/index.js
+src/rest-server/config/stripe/index.js
