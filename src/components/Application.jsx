@@ -3,8 +3,6 @@
 //////////////////////////////////////////////////////////////////////
 import React, { Suspense, Component } from "react";
 import { Route, Switch } from "react-router-dom";
-// import { StripeProvider } from "react-stripe-elements";
-// import SettingUpStripe from "./Stripe/SettingUpStripe.jsx";
 import Navigation from "./NavigationBar.jsx";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
