@@ -73,7 +73,6 @@ class Form extends Component {
   submit = async () => {
     let { history } = this.props;
     let response;
-    console.log("SUBMIT DID FIRE");
     if (this.state.amount < "500") {
       alert("The minimum amount is $5");
     } else {
