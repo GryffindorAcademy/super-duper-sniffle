@@ -80,25 +80,27 @@ class Form extends Component {
         let { token } = await this.props.stripe.createToken({
           name: this.state.name
         });
-        let body = {
-          name: this.state.name,
-          lastname: this.state.lastname,
-          email: this.state.email,
-          token: token.id,
-          amount: this.state.amount
-        };
-        if (this.state.frequency === "one time") {
-          response = await fetch("/api/stripe/oneTimeDonation", {
-            method: "POST",
-            headers: { "Content-Type": "text/plain" },
-            body: JSON.stringify(body)
-          });
-        } else {
-          response = await fetch("/api/stripe/monthlyDonation", {
-            method: "POST",
-            headers: { "Content-Type": "text/plain" },
-            body: JSON.stringify(body)
-          });
+        if (token) {
+          let body = {
+            name: this.state.name,
+            lastname: this.state.lastname,
+            email: this.state.email,
+            token: token.id,
+            amount: this.state.amount
+          };
+          if (this.state.frequency === "one time") {
+            response = await fetch("/api/stripe/oneTimeDonation", {
+              method: "POST",
+              headers: { "Content-Type": "text/plain" },
+              body: JSON.stringify(body)
+            });
+          } else {
+            response = await fetch("/api/stripe/monthlyDonation", {
+              method: "POST",
+              headers: { "Content-Type": "text/plain" },
+              body: JSON.stringify(body)
+            });
+          }
         }
         if (response.ok) {
           alert("Thank you for your donation!");
