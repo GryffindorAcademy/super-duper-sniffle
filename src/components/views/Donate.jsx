@@ -2,9 +2,9 @@
 // Donate page, was refactored together from two different donate pages //
 //////////////////////////////////////////////////////////////////////////
 import React, { Component } from "react";
-import Footer from "../Footer/Footer.jsx";
 import { StripeProvider } from "react-stripe-elements";
 import { stripeKey } from "../../data/stripeKeys";
+import Footer from "../Footer/Footer.jsx";
 import SettingUpStripe from "../Stripe/SettingUpStripe.jsx";
 import donate1 from "../../images/donateMonthly1.jpg";
 import donate2 from "../../images/donateMonthly2.jpg";
