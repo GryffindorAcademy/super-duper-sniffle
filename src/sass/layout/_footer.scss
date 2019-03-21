@@ -27,6 +27,7 @@
     @include respond(phone) {
       padding-right: 3rem;
       padding-left: 3rem;
+      padding-bottom: 13rem;
     }
     @include respond(small) {
     }

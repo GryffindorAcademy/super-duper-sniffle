@@ -16,6 +16,9 @@
       @include respond(tab-port) {
         left: 3rem;
       }
+      @include respond(phone) {
+        z-index: -5;
+      }
     }
 
     &--p2 {
@@ -25,6 +28,9 @@
       @include respond(tab-port) {
         right: 2rem;
         top: -1rem;
+      }
+      @include respond(phone) {
+        z-index: -5;
       }
     }
 

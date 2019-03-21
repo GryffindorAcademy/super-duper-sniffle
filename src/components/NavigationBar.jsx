@@ -11,7 +11,6 @@ const MobileNav = () => (
       <FontAwesomeIcon icon="bars" size="5x" />
     </a>
     <div className="dropdownContent">
-      <Link to="/MonthlyDonate">Give monthly</Link>
       <Link to="/Team">Team</Link>
       <Link to="/VisitAfrica">Visit Africa</Link>
       <Link to="/Donate">Donate</Link>
