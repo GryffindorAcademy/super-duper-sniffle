@@ -18,6 +18,7 @@
       }
       @include respond(phone) {
         z-index: -5;
+        top: 1px;
       }
     }
 

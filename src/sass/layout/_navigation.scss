@@ -36,6 +36,9 @@
     color: $color-purple; 
     font-size: 3rem;
     letter-spacing: .3rem;
+    @include respond(phone) {
+      font-size: 5rem;
+    }
   }
   
   &__list {
@@ -79,13 +82,16 @@
 
 .dropbtn {
   display: none;
-  @include respond(tab-port) {
-  display: inline-block; 
-  position: relative; 
-  float: right;
-  margin-right: 3rem;
-  cursor: pointer;
-  }
+    @include respond(tab-port) {
+    display: inline-block; 
+    position: relative; 
+    float: right;
+    margin-right: 3rem;
+    cursor: pointer;
+    }
+    @include respond(phone) {
+      margin-top: 1rem;
+    }
 }
 
 .dropbtnIcon {
