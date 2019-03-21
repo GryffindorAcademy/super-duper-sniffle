@@ -1,3 +1,6 @@
+////////////////////////////
+// Routes for Jijenge api //
+////////////////////////////
 const router = require("express").Router();
 const oneTimeDonation = require("../controllers/oneTimeDonation");
 const monthlyDonation = require("../controllers/monthlyDonation");
