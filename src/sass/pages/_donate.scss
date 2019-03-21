@@ -125,6 +125,10 @@
       border: solid $color-purple thin;
       transform: translateY(-1rem) scale(1.03);
     }
+    &:disabled {
+      color: gray;
+      background-color: whitesmoke;
+    }
   }
 }
 
