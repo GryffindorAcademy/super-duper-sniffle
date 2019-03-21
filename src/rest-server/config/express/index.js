@@ -1,3 +1,6 @@
+//////////////////////////////
+// Config file for express //
+//////////////////////////////
 const express = require("express");
 const app = express();
 const parser = require("body-parser");
@@ -5,6 +8,9 @@ const staticMiddleware = express.static("dist");
 const helmet = require("helmet");
 const jijengeRouter = require("../../router");
 
+/////////////////////////////////////////////////////////////////
+// When developnebt mode is ran, dev server is ran with server //
+/////////////////////////////////////////////////////////////////
 const isProd = process.env.NODE_ENV === "production";
 if (!isProd) {
   const webpack = require("webpack");

@@ -10,6 +10,7 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      button: false,
       name: "",
       lastname: "",
       email: "",
@@ -26,11 +27,16 @@ class Form extends Component {
         ["Email", "email"]
       ]
     };
+    this.buttonLogic = this.buttonLogic.bind(this);
     this.handleState = this.handleState.bind(this);
     this.handleAmount = this.handleAmount.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
     this.toggleToMonthly = this.toggleToMonthly.bind(this);
     this.submit = this.submit.bind(this);
+  }
+
+  buttonLogic = () => {
+    this.setState({ button: !this.state.button });
   }
 
   handleState = e => {
@@ -70,7 +76,8 @@ class Form extends Component {
     }
   };
 
-  submit = async ev => {
+  submit = async () => {
+    this.buttonLogic();
     let { history } = this.props;
     let response;
     if (this.state.amount < "500") {
@@ -87,6 +94,9 @@ class Form extends Component {
           token: token.id,
           amount: this.state.amount
         };
+        ////////////////////////////////////////////////////////////////////////
+        // Dynamically make request based on 'one time' or 'monthly' selected //
+        ////////////////////////////////////////////////////////////////////////
         if (this.state.frequency === "one time") {
           response = await fetch("/api/stripe/oneTimeDonation", {
             method: "POST",
@@ -100,6 +110,9 @@ class Form extends Component {
             body: JSON.stringify(body)
           });
         }
+        //////////////////////////////////////////////////////////////
+        // If response returns as ok, continue to visit africa view //
+        //////////////////////////////////////////////////////////////
         if (response.ok) {
           alert("Thank you for your donation!");
           history.push("/VisitAfrica");
@@ -108,6 +121,7 @@ class Form extends Component {
             "It seems there is an error with your personal information, please try again"
           );
         }
+        this.buttonLogic();
       } catch (err) {
         console.log(err);
       }
@@ -166,8 +180,8 @@ class Form extends Component {
           />
         </section>
         <Terms />
-        <button className="donationForm__button" onClick={this.submit}>
-          Donate
+        <button className="donationForm__button" onClick={this.submit} disabled={this.state.button}>
+          {this.state.button ? 'Please wait...' : 'Donate'}
         </button>
       </section>
     );

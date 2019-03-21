@@ -1,7 +1,13 @@
+//////////////////////////////
+// Entry point for server   //
+//////////////////////////////
 const http = require("http");
 const app = require("./config/express");
 const PORT = process.env.PORT || 6060;
 
+////////////////////////////////////////////////
+// Create http server for Jijenge application //
+////////////////////////////////////////////////
 const server = http.createServer(app);
 
 const init = () => {

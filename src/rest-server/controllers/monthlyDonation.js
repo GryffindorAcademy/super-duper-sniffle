@@ -1,11 +1,17 @@
+//////////////////////////////////////
+// Controller for monthly donations //
+//////////////////////////////////////
 const { stripe } = require("../config/stripe");
 const { Joi, schema } = require("../lib/middleware/request-validation.js");
-// const client = require("../config/postgres/index.js");
+// const { addMonthlyDonor } = require("../config/postgres/config");
 
 const monthlyDonation = {
   post: async (req, res) => {
     const { name, lastname, email, token, amount } = JSON.parse(req.body);
     const productAmount = amount / 100;
+    ///////////////////////////////////////////////////////
+    // Joi validates to ensure all data has been entered //
+    ///////////////////////////////////////////////////////
     const validation = Joi.validate(
       { name: `${name}`, lastname: `${lastname}`, email: `${email}` },
       schema,
@@ -19,8 +25,13 @@ const monthlyDonation = {
     );
     try {
       if (validation) {
+        console.log("MONTHLY DID FIRE - SERVER");
+        let customer = null;
         if (amount === 2500) {
-          const customer = await stripe.customers.create({
+          ////////////////////////////////////
+          // If donation is for $25 monthly //
+          ////////////////////////////////////
+          customer = await stripe.customers.create({
             email: email,
             source: token
           });
@@ -29,7 +40,10 @@ const monthlyDonation = {
             items: [{ plan: "plan_Ds6HYG3GMu3nnm" }]
           });
         } else if (amount === 5000) {
-          const customer = await stripe.customers.create({
+          ////////////////////////////////////
+          // If donation is for $50 monthly //
+          ////////////////////////////////////
+          customer = await stripe.customers.create({
             email: email,
             source: token
           });
@@ -38,7 +52,10 @@ const monthlyDonation = {
             items: [{ plan: "plan_Ds6H6Pe1gGY8c4" }]
           });
         } else if (amount === 7500) {
-          const customer = await stripe.customers.create({
+          ////////////////////////////////////
+          // If donation is for $75 monthly //
+          ////////////////////////////////////
+          customer = await stripe.customers.create({
             email: email,
             source: token
           });
@@ -47,7 +64,10 @@ const monthlyDonation = {
             items: [{ plan: "plan_Ds6IG08ocs7tyW" }]
           });
         } else if (amount === 10000) {
-          const customer = await stripe.customers.create({
+          /////////////////////////////////////
+          // If donation is for $100 monthly //
+          /////////////////////////////////////
+          customer = await stripe.customers.create({
             email: email,
             source: token
           });
@@ -56,6 +76,9 @@ const monthlyDonation = {
             items: [{ plan: "plan_Ds6I9oT7FcfiOv" }]
           });
         } else {
+          ///////////////////////////////////////////////
+          // If donation is for a custom value monthly //
+          ///////////////////////////////////////////////
           const product = await stripe.products.create({
             name: `Your $${productAmount} donation to Jijenge Academy`,
             type: "service"
@@ -67,15 +90,19 @@ const monthlyDonation = {
             interval: "month",
             amount: amount
           });
-          const customer = await stripe.customers.create({
+          customer = await stripe.customers.create({
             email: email,
             source: token
           });
-          const subscription = await stripe.subscriptions.create({
+          const subscription = await testStripeKey.subscriptions.create({
             customer: customer.id,
             items: [{ plan: varPlan.id }]
           });
         }
+        ///////////////////////////////////////////////////////////
+        // Call upon the query to insert customer info into PSQL //
+        ///////////////////////////////////////////////////////////
+        // await addMonthlyDonor([name, lastname, customer.id, email]);
         res.status(200).end();
       } else {
         res.status(409).end();

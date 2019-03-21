@@ -1,59 +1,64 @@
+//////////////////////////////////////
+// Config file for database queries //
+//////////////////////////////////////
 const db = require("./index");
 
-const database = "ddshp0nd9oge9";
-
-export const createDatabase = async () => {
-  try {
-    await db.query(`CREATE DATABASE ${database}`);
-    console.log("successfully created database ", database);
-  } catch (err) {
-    console.log("error creating database ", err);
-  }
-};
-
-export const dropDatabase = async () => {
-  try {
-    await db.query(`DROP DATABASE IF EXISTS ${database}`);
-    console.log("successfully dropped database ", database);
-  } catch (err) {
-    console.log("error dropping database ", err);
-  }
-};
-
-export const useDatabase = async () => {
-  try {
-    await db.query(`USE IF EXISTS ${database}`);
-    console.log("successfully using database ", database);
-  } catch (err) {
-    console.log("error using database ", err);
-  }
-};
-
-export const createMonthlyDonors = async () => {
+/////////////////////////////////////
+// Create the monthly donars table //
+/////////////////////////////////////
+const createMonthlyDonors = async () => {
   try {
     await db.query(
-      `
-      CREATE TABLE IF NOT EXISTS monthlyDonors
-      (
-        id SERIAL PRIMARY KEY,
-        name varchar (50),
-        lastname varchar (50),
-        customerid varchar (50),
-        email varchar (50) UNIQUE 
-      )
-      `
+      "CREATE TABLE IF NOT EXISTS monthlydonors(id SERIAL PRIMARY KEY, name varchar (50),last_name varchar (50),customerid varchar (50),email varchar (50) UNIQUE)",
+      (err, res) => {
+        if (err) {
+          console.log("Error inside createMonthlyDonors query", err);
+        } else {
+          console.log("createMonthlyDonors successful!");
+        }
+      }
     );
-    console.log("successfully created monthlyDonors table");
   } catch (err) {
-    console.log("error creating monthlyDonors table ", err);
+    console.log(console.log("createMonthlyDonors query failed.", err));
   }
 };
 
-export const dropMonthlyDonors = async () => {
+/////////////////////////////////////
+// Drop the monthly donars table //
+/////////////////////////////////////
+const dropMonthlyDonors = async () => {
   try {
-    await db.query(`DROP TABLE IF EXISTS monthlyDonors`);
-    console.log("successfully dropped monthlyDonors table");
+    await db.query("DROP TABLE IF EXISTS monthlydonors", (err, res) => {
+      if (err) {
+        console.log("Error inside dropMonthlyDonors query", err);
+      } else {
+        console.log("dropMonthlyDonors successful!");
+      }
+    });
   } catch (err) {
-    console.log("error dropping monthlyDonors table ", err);
+    console.log(console.log("dropMonthlyDonors query failed.", err));
   }
 };
+
+///////////////////////////////////////////////
+// Insert data into the monthly donars table //
+///////////////////////////////////////////////
+const addMonthlyDonor = async valuesArray => {
+  try {
+    await db.query(
+      "INSERT INTO monthlyDonors(name, last_name, customerid, email) VALUES($1, $2, $3, $4)",
+      valuesArray,
+      (err, res) => {
+        if (err) {
+          console.log("Error inside addMonthlyDonor query", err);
+        } else {
+          console.log("addMonthlyDonor successful!", res.rows[0]);
+        }
+      }
+    );
+  } catch (err) {
+    console.log(console.log("addMonthlyDonor query failed.", err));
+  }
+};
+
+module.exports = { createMonthlyDonors, dropMonthlyDonors, addMonthlyDonor };
