@@ -18,37 +18,37 @@
   }
   &__container {
     border-top: solid $color-white thin;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
     padding-bottom: 5rem;
-    padding-right: 40rem;
-    padding-left: 40rem;
-    display: inline-block;
-    position: relative;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    width:100%; 
+    justify-content: space-around; 
     @include respond(phone) {
       padding-right: 3rem;
       padding-left: 3rem;
-      padding-bottom: 13rem;
+      max-width: 100%;
     }
     @include respond(small) {
     }
     &--form {
-      position: absolute;
+      width: 30%; 
       color: $color-white;
       display: inline-block;
-      right: 12rem;
       font-size: 1.25rem;
       @include respond(phone) {
         font-size: 2rem;
       }
     }
     &--application {
-      position: absolute;
+      width: 30%;
       color: $color-white;
-      display: inline-block;
       font-size: 1.25rem;
-      left: 10rem;
       @include respond(phone) {
         font-size: 2rem;
+        position: relative;
+        left: 0;
       }
     }
     &--social {
@@ -78,7 +78,6 @@
     position: absolute;
     top: 1rem;
     font-size: 3;
-    left: -0.3rem;
     opacity: 0.1;
     @include respond(tab-port) {
       top: 1.6rem;
@@ -86,12 +85,9 @@
       font-size: 2.7;
     }
     @include respond(phone) {
-      top: 1rem;
-      left: -0.1rem;
+      top: -1rem;
       font-size: 2;
-    }
-    @include respond(small) {
-      left: 10.2rem;
+      position: relative;
     }
   }
 }
