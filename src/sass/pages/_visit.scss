@@ -134,8 +134,8 @@
     left: 33%;
     text-shadow: 1px 1px 1px $dark-grey;
     @include respond(phone) {
-      top: 8%;
-      left: 28%;
+      top: 14%;
+      left: 17%;
     }
     @include respond(small) {
     }
@@ -151,7 +151,8 @@
       top: 20%;
       left: 40%;
       @include respond(phone) {
-        left: 42%;
+        left: 29%;
+        top: 22%;
       }
     }
     &--btn {
@@ -168,6 +169,7 @@
       cursor: pointer;
       transition: transform 0.4s;
       box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+      
       &:hover {
         background-color: $color-white;
         color: $color-pink;
