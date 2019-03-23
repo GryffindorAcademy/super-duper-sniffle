@@ -79,6 +79,8 @@ class Form extends Component {
   submit = async () => {
     let { history } = this.props;
     let response;
+    let body; 
+
     if (this.state.amount < "500") {
       alert("The minimum amount is $5");
     } else {
@@ -87,13 +89,20 @@ class Form extends Component {
         let { token } = await this.props.stripe.createToken({
           name: this.state.name
         });
-        let body = {
-          name: this.state.name,
-          lastname: this.state.lastname,
-          email: this.state.email,
-          token: token.id,
-          amount: this.state.amount
-        };
+        if (token !== undefined) {
+          body = {
+            name: this.state.name,
+            lastname: this.state.lastname,
+            email: this.state.email,
+            token: token.id,
+            amount: this.state.amount
+          };
+        } else {
+          this.buttonLogic();
+          alert(
+            "It seems there is an error with your personal information, please try again"
+          );
+        }
         ////////////////////////////////////////////////////////////////////////
         // Dynamically make request based on 'one time' or 'monthly' selected //
         ////////////////////////////////////////////////////////////////////////
@@ -116,9 +125,9 @@ class Form extends Component {
         if (response.ok) {
           alert("Thank you for your donation!");
           history.push("/VisitAfrica");
-        } else if (response.status === 409 || response.status === 402) {
+        } else if (response.status === 409 || response.status === 402 || response.status === 500) {
           alert(
-            "It seems there is an error with your personal information, please try again"
+            "It seems there is an error with our server, please try again"
           );
         }
         this.buttonLogic();
