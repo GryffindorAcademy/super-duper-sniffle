@@ -125,9 +125,13 @@ class Form extends Component {
         if (response.ok) {
           alert("Thank you for your donation!");
           history.push("/VisitAfrica");
-        } else if (response.status === 409 || response.status === 402 || response.status === 500) {
+        } else if (response.status === 409 || response.status === 402) {
           alert(
-            "It seems there is an error with our server, please try again"
+            "Please check that your information is correct, please try again"
+          );
+        } else if (response.status === 500) {
+          alert(
+            "It seems there is an error with our server, please try again later"
           );
         }
         this.buttonLogic();
