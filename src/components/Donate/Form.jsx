@@ -116,7 +116,7 @@ class Form extends Component {
         if (response.ok) {
           alert("Thank you for your donation!");
           history.push("/VisitAfrica");
-        } else if (response.status === 409) {
+        } else if (response.status === 409 || response.status === 402) {
           alert(
             "It seems there is an error with your personal information, please try again"
           );
