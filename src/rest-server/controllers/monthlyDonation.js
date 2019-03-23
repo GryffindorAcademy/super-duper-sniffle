@@ -25,7 +25,6 @@ const monthlyDonation = {
     );
     try {
       if (validation) {
-        console.log("MONTHLY DID FIRE - SERVER");
         let customer = null;
         if (amount === 2500) {
           ////////////////////////////////////

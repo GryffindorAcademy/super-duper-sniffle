@@ -30,7 +30,7 @@ const oneTimeDonation = {
           description: "Jijenge Donation",
           source: token
         });
-        success("Successfully processed data from payment controller");
+        console.log("Successfully processed data from payment controller");
         res.json({ status });
       } else {
         res.status(409).end();

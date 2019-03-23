@@ -77,12 +77,12 @@ class Form extends Component {
   };
 
   submit = async () => {
-    this.buttonLogic();
     let { history } = this.props;
     let response;
     if (this.state.amount < "500") {
       alert("The minimum amount is $5");
     } else {
+      this.buttonLogic();
       try {
         let { token } = await this.props.stripe.createToken({
           name: this.state.name
