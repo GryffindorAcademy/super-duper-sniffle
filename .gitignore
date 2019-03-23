@@ -11,8 +11,3 @@ npm-debug.log*
 node_modules/
 jspm_packages/
 
-# Secret key for stripe server
-src/rest-server/config/stripe/index.js
-
-# Build files
-dist/
