@@ -2,6 +2,9 @@
   "name": "client",
   "version": "1.0.0",
   "description": "A website for the kids of Jijenge Academy",
+  "engines": {
+    "node": "8.9.4"
+  },
   "main": "index.js",
   "scripts": {
     "build": "BABEL_ENV=production webpack --config=config/webpack.config.js --mode production --env.NODE_ENV=production",
