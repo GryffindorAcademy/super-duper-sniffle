@@ -14,9 +14,9 @@ export default class Footer extends Component {
         <h3 className="footer__logo">Jijenge</h3>
         <div className="footer__container">
           <section className="footer__container--application">
-            <div>Application for federal recognition</div>
-            <div>of section 501(c)(3)</div>
-            <div>charitable status is in process</div>
+            <div>Jijenge is a 501(c)(3)</div>
+            <div>not for profit</div>
+            <div>organization</div>
           </section>
           <section className="footer__container--social">
             <div className="footer__container--social-email">
@@ -24,7 +24,7 @@ export default class Footer extends Component {
             </div>
           </section>
           <section className="footer__container--form">
-            <div>112 South St. Suite 106</div>
+            <div>115 Kingston St. Floor 6</div>
             <div>Boston, MA 02111</div>
           </section>
         </div>
